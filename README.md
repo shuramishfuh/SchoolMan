@@ -1,1 +1,1 @@
-# SchoolMan
+# ProjectCollection
