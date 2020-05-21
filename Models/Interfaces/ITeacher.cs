@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Models.Interfaces
@@ -10,10 +11,10 @@ namespace Models.Interfaces
         public string Name { get; set; }
         [Required]
         public string userName { get; set; }
-        [Required]
+        [Required][DefaultValue("password")]
         public string Password { get; set; }
         [Required]
-        public string Course { get; set; }
+        public ICourses Courses { get; set; }
         [Required][EmailAddress]
         public string Email { get; set; }
         [Required][DataType(DataType.Date)]
