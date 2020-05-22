@@ -2,6 +2,6 @@
 
 ## Motivation
 
-<p align="center">
+<p>
   Bridging the technology gap in African education by digitalizing student information systems
 </p>
