@@ -9,8 +9,6 @@ namespace Models.Interfaces
         public int ID { get; set; }
         [Required]
         public string Name { get; set; }
-        [Required]
-        public Collection<ITeacher> Proctor { get; set; }
         [Required] [DataType(DataType.Date)]
         public DateTime Date { get; set; }
     }
