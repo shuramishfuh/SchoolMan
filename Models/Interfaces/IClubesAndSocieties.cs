@@ -10,7 +10,7 @@ namespace Models.Interfaces
         [Required]
         public string Name { get; set; }
         [Required] [DataType(DataType.Date)]
-        public DateTime Date { get; set; }
+        public DateTime Year { get; set; }
     }
 
 }

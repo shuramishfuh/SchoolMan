@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -14,7 +16,7 @@ namespace Models.Interfaces
         [Required][DefaultValue("password")]
         public string Password { get; set; }
         [Required]
-        public ICourses Courses { get; set; }
+        public Collection<ICourses> Courses { get; set; }
         [Required][EmailAddress]
         public string Email { get; set; }
         [Required][DataType(DataType.Date)]

@@ -13,7 +13,7 @@ namespace Models.Interfaces
         [Required]
         public float Amount { get; set; }
         [Required]
-        public int RoomNumber { get; set; }
+        public string RoomNumber { get; set; }
         [Required]
         public IOccupancyType Occupancy { get; set; }
 

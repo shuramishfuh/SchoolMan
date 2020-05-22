@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Models.Interfaces
@@ -6,7 +7,7 @@ namespace Models.Interfaces
     interface ISubcription
     {
         [Key]
-        [Required]
+        [Required][DefaultValue("Monthly")]
         public string type { get; set; }
         [Required]
         [DataType(DataType.Date)]
