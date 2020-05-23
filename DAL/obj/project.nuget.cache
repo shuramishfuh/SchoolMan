@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "reTrGNtPG1sEQZoTOsU1Iw42AUxgw7hj8bEuU5JHXZMO2AssZ7pIX+hfqZQtZmNA/xR4C+tg8oLbNuHmGjiK0g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\MCFScholar\\source\\repos\\SchoolMan\\DAL\\DAL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MCFScholar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

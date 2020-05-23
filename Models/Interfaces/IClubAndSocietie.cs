@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Models.Interfaces
 {
-    interface IClubesAndSocieties
+    interface IClubAndSocietie
     {
         public int ID { get; set; }
         [Required]

@@ -2,7 +2,7 @@
 
 namespace Models.Interfaces
 {
-    interface ICourses
+    interface ICourse
     {
         [Key]
         public int ID { get; set; }

@@ -16,7 +16,7 @@ namespace Models.Interfaces
         [Required][DefaultValue("password")]
         public string Password { get; set; }
         [Required]
-        public Collection<ICourses> Courses { get; set; }
+        public Collection<ICourse> Courses { get; set; }
         [Required][EmailAddress]
         public string Email { get; set; }
         [Required][DataType(DataType.Date)]
