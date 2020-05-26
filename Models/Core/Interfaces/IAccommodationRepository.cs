@@ -1,8 +1,9 @@
-﻿//using Models.Entities;
+﻿using Models.Core.Interfaces;
+using Models.Entities;
 
-//namespace DAL.Interfaces
-//{
-//    interface IAccommodationRepository : IRepository<Accomodation>
-//    {
-//    }
-//}
+namespace Models.Core.Interfaces
+{
+    interface IAccommodationRepository : IRepository<Accomodation>
+    {
+    }
+}

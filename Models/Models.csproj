@@ -6,11 +6,8 @@
 
   <ItemGroup>
     <Compile Remove="Context\**" />
-    <Compile Remove="Core\**" />
     <EmbeddedResource Remove="Context\**" />
-    <EmbeddedResource Remove="Core\**" />
     <None Remove="Context\**" />
-    <None Remove="Core\**" />
   </ItemGroup>
 
 

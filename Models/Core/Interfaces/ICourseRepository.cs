@@ -1,8 +1,15 @@
-﻿//using Models.Entities;
+﻿using System.Collections.Generic;
+using Models.Entities;
 
-//namespace DAL.Interfaces
-//{
-//    interface  ICourseRepository :IRepository<Course>
-//    {
-//    }
-//}
+namespace Models.Core.Interfaces
+{
+    interface ICourseRepository : IRepository<Course>
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="className"> get top performing course per class</param>
+        /// <returns></returns>
+        IEnumerable<Course> GetHigestPerformingCoursesPerClass(string className);
+    }
+}
