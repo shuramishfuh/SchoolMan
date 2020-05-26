@@ -1,0 +1,14 @@
+C:\Users\MCFScholar\source\repos\SchoolMan\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+C:\Users\MCFScholar\source\repos\SchoolMan\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Users\MCFScholar\source\repos\SchoolMan\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
+C:\Users\MCFScholar\source\repos\SchoolMan\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+C:\Users\MCFScholar\source\repos\SchoolMan\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+C:\Users\MCFScholar\source\repos\SchoolMan\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\MCFScholar\source\repos\SchoolMan\DAL\bin\Debug\netcoreapp3.1\Models.dll
+C:\Users\MCFScholar\source\repos\SchoolMan\DAL\bin\Debug\netcoreapp3.1\Models.pdb
+C:\Users\MCFScholar\source\repos\SchoolMan\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+C:\Users\MCFScholar\source\repos\SchoolMan\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CopyComplete
+C:\Users\MCFScholar\source\repos\SchoolMan\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+C:\Users\MCFScholar\source\repos\SchoolMan\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\MCFScholar\source\repos\SchoolMan\DAL\bin\Debug\netcoreapp3.1\DAL.dll.config
+C:\Users\MCFScholar\source\repos\SchoolMan\DAL\bin\Debug\netcoreapp3.1\Models.dll.config

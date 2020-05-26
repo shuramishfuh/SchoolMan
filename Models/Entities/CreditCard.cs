@@ -1,14 +1,17 @@
-﻿using Models.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using Models.EntityInterfaces;
 
 namespace Models.Entities
 {
-    class CreditCard : ICreditCard
+    public  class CreditCard : ICreditCard
     {
-        public int CreditCardNumber { get ; set; }
-        public DateTime ExpireDate { get; set ; }
-        public int SecurityCode { get ; set ; }
+        public int Id { get; set; }
+        public string CreditCardNumber { get; set; }
+        public DateTime ExpiryDate { get; set; }
+        public byte SecurityCode { get; set; }
+        public int AdminId { get; set; }
+
+        public virtual Admin Admin { get; set; }
     }
 }
