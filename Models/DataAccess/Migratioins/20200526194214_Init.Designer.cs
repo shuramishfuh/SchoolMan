@@ -5,13 +5,12 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Models.Context;
-using Models.Entities;
+using Models.DataAccess.DataContext;
 
-namespace Models.Migrations
+namespace Models.DataAccess.Migratioins
 {
-    [DbContext(typeof(SchoolContext))]
-    [Migration("20200526051901_Init")]
+    [DbContext(typeof(SchoolAppContext))]
+    [Migration("20200526194214_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

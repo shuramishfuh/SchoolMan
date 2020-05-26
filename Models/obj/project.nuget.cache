@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FSqLXGMZXKlBD0hA02ISAxvXV9Vb7AAXFMnqjTAokJY1ebicNum3GEYdJHPOQMCgqcu1CB9M/OBSfwIiZy39eA==",
+  "dgSpecHash": "IRn8hXXpnRjQ0/2+hUFaFITQYNVlbxdpd/MBNlNuNiA8qFob8RlqmjUUVMZ7eOlQTcleDehBV507LeuckUEnKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MCFScholar\\source\\repos\\SchoolMan\\Models\\Models.csproj",
+  "projectFilePath": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MCFScholar\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\MCFScholar\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

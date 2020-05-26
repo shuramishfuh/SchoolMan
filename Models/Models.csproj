@@ -5,8 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Entities\Admin.cs~RFe01f5cc.TMP" />
+    <Compile Remove="Context\**" />
+    <Compile Remove="Core\**" />
+    <EmbeddedResource Remove="Context\**" />
+    <EmbeddedResource Remove="Core\**" />
+    <None Remove="Context\**" />
+    <None Remove="Core\**" />
   </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.4">
