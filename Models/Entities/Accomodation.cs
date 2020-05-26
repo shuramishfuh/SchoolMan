@@ -3,7 +3,7 @@ using Models.EntityInterfaces;
 
 namespace Models.Entities
 {
-    public  class Accomodation : IAccomodation
+    public class Accomodation : IAccomodation
     {
         public Accomodation()
         {

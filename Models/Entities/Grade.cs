@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using Models.EntityInterfaces;
+﻿using Models.EntityInterfaces;
 
 namespace Models.Entities
 {
-    public  class Grade : IGrade
+    public class Grade : IGrade
     {
         public int Id { get; set; }
         public string LetterGrade { get; set; }

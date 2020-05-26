@@ -3,7 +3,7 @@ using Models.EntityInterfaces;
 
 namespace Models.Entities
 {
-    public  class ClubAndSociety : IClubAndSociety
+    public class ClubAndSociety : IClubAndSociety
     {
         public ClubAndSociety()
         {

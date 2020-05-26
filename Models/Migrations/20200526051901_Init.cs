@@ -8,21 +8,18 @@ namespace Models.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Accomodation",
-                columns: table => new
+                "Accomodation",
+                table => new
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(maxLength: 50, nullable: false)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Accomodation", x => x.ID);
-                });
+                constraints: table => { table.PrimaryKey("PK_Accomodation", x => x.ID); });
 
             migrationBuilder.CreateTable(
-                name: "Admin",
-                columns: table => new
+                "Admin",
+                table => new
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
@@ -30,44 +27,35 @@ namespace Models.Migrations
                     UserName = table.Column<string>(maxLength: 50, nullable: false),
                     Email = table.Column<string>(maxLength: 50, nullable: false),
                     Password = table.Column<string>(maxLength: 50, nullable: false),
-                    DOB = table.Column<DateTime>(type: "date", nullable: false),
-                    SignUp = table.Column<DateTime>(type: "date", nullable: false)
+                    DOB = table.Column<DateTime>("date", nullable: false),
+                    SignUp = table.Column<DateTime>("date", nullable: false)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Admin", x => x.ID);
-                });
+                constraints: table => { table.PrimaryKey("PK_Admin", x => x.ID); });
 
             migrationBuilder.CreateTable(
-                name: "Class",
-                columns: table => new
+                "Class",
+                table => new
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(maxLength: 50, nullable: false),
                     Tuition = table.Column<double>(nullable: false)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Class", x => x.ID);
-                });
+                constraints: table => { table.PrimaryKey("PK_Class", x => x.ID); });
 
             migrationBuilder.CreateTable(
-                name: "ClubAndSociety",
-                columns: table => new
+                "ClubAndSociety",
+                table => new
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(maxLength: 50, nullable: false)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ClubAndSociety", x => x.ID);
-                });
+                constraints: table => { table.PrimaryKey("PK_ClubAndSociety", x => x.ID); });
 
             migrationBuilder.CreateTable(
-                name: "Teacher",
-                columns: table => new
+                "Teacher",
+                table => new
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
@@ -75,16 +63,13 @@ namespace Models.Migrations
                     UserName = table.Column<string>(maxLength: 50, nullable: false),
                     Password = table.Column<string>(maxLength: 50, nullable: false),
                     Email = table.Column<string>(maxLength: 50, nullable: false),
-                    DateOfEntry = table.Column<DateTime>(type: "date", nullable: false)
+                    DateOfEntry = table.Column<DateTime>("date", nullable: false)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Teacher", x => x.ID);
-                });
+                constraints: table => { table.PrimaryKey("PK_Teacher", x => x.ID); });
 
             migrationBuilder.CreateTable(
-                name: "Room",
-                columns: table => new
+                "Room",
+                table => new
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
@@ -98,21 +83,21 @@ namespace Models.Migrations
                 {
                     table.PrimaryKey("PK_Room", x => x.ID);
                     table.ForeignKey(
-                        name: "Room_accomodation",
-                        column: x => x.AccomodationID,
-                        principalTable: "Accomodation",
-                        principalColumn: "ID",
+                        "Room_accomodation",
+                        x => x.AccomodationID,
+                        "Accomodation",
+                        "ID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "CreditCard",
-                columns: table => new
+                "CreditCard",
+                table => new
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CreditCardNumber = table.Column<string>(maxLength: 20, nullable: false),
-                    ExpiryDate = table.Column<DateTime>(type: "date", nullable: false),
+                    ExpiryDate = table.Column<DateTime>("date", nullable: false),
                     SecurityCode = table.Column<byte>(nullable: false),
                     Admin_ID = table.Column<int>(nullable: false)
                 },
@@ -120,22 +105,22 @@ namespace Models.Migrations
                 {
                     table.PrimaryKey("PK_CreditCard", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_CreditCard_Admin",
-                        column: x => x.Admin_ID,
-                        principalTable: "Admin",
-                        principalColumn: "ID",
+                        "FK_CreditCard_Admin",
+                        x => x.Admin_ID,
+                        "Admin",
+                        "ID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Subscription",
-                columns: table => new
+                "Subscription",
+                table => new
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Type = table.Column<string>(maxLength: 16, nullable: false),
-                    StartDate = table.Column<DateTime>(type: "date", nullable: false),
-                    ExpireDate = table.Column<DateTime>(type: "date", nullable: false),
+                    StartDate = table.Column<DateTime>("date", nullable: false),
+                    ExpireDate = table.Column<DateTime>("date", nullable: false),
                     Amount = table.Column<float>(nullable: false),
                     Admin_ID = table.Column<int>(nullable: false)
                 },
@@ -143,16 +128,16 @@ namespace Models.Migrations
                 {
                     table.PrimaryKey("PK_Subscription", x => x.ID);
                     table.ForeignKey(
-                        name: "FK__Subscript__Admin__01142BA1",
-                        column: x => x.Admin_ID,
-                        principalTable: "Admin",
-                        principalColumn: "ID",
+                        "FK__Subscript__Admin__01142BA1",
+                        x => x.Admin_ID,
+                        "Admin",
+                        "ID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Course",
-                columns: table => new
+                "Course",
+                table => new
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
@@ -164,24 +149,24 @@ namespace Models.Migrations
                 {
                     table.PrimaryKey("PK_Course", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Course_Teacher",
-                        column: x => x.TeacherID,
-                        principalTable: "Teacher",
-                        principalColumn: "ID",
+                        "FK_Course_Teacher",
+                        x => x.TeacherID,
+                        "Teacher",
+                        "ID",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Student",
-                columns: table => new
+                "Student",
+                table => new
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(maxLength: 60, nullable: false),
                     UserName = table.Column<string>(maxLength: 50, nullable: false),
                     Email = table.Column<string>(maxLength: 50, nullable: false),
-                    Password = table.Column<string>(type: "text", nullable: false),
-                    Admitted = table.Column<DateTime>(type: "date", nullable: false),
+                    Password = table.Column<string>("text", nullable: false),
+                    Admitted = table.Column<DateTime>("date", nullable: false),
                     TuitionPaid = table.Column<bool>(nullable: false),
                     RoomID = table.Column<int>(nullable: true),
                     ClubAndSocietyID = table.Column<int>(nullable: true),
@@ -191,28 +176,28 @@ namespace Models.Migrations
                 {
                     table.PrimaryKey("PK_Student", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Student_Class",
-                        column: x => x.ClassID,
-                        principalTable: "Class",
-                        principalColumn: "ID",
+                        "FK_Student_Class",
+                        x => x.ClassID,
+                        "Class",
+                        "ID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Student_ClubAndSociety",
-                        column: x => x.ClubAndSocietyID,
-                        principalTable: "ClubAndSociety",
-                        principalColumn: "ID",
+                        "FK_Student_ClubAndSociety",
+                        x => x.ClubAndSocietyID,
+                        "ClubAndSociety",
+                        "ID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Student_Room",
-                        column: x => x.RoomID,
-                        principalTable: "Room",
-                        principalColumn: "ID",
+                        "FK_Student_Room",
+                        x => x.RoomID,
+                        "Room",
+                        "ID",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Grade",
-                columns: table => new
+                "Grade",
+                table => new
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
@@ -225,100 +210,100 @@ namespace Models.Migrations
                 {
                     table.PrimaryKey("PK_Grade", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Grade_Course",
-                        column: x => x.CourseID,
-                        principalTable: "Course",
-                        principalColumn: "ID",
+                        "FK_Grade_Course",
+                        x => x.CourseID,
+                        "Course",
+                        "ID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Grade_Student",
-                        column: x => x.StudentID,
-                        principalTable: "Student",
-                        principalColumn: "ID",
+                        "FK_Grade_Student",
+                        x => x.StudentID,
+                        "Student",
+                        "ID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Course_TeacherID",
-                table: "Course",
-                column: "TeacherID");
+                "IX_Course_TeacherID",
+                "Course",
+                "TeacherID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CreditCard_Admin_ID",
-                table: "CreditCard",
-                column: "Admin_ID");
+                "IX_CreditCard_Admin_ID",
+                "CreditCard",
+                "Admin_ID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Grade_CourseID",
-                table: "Grade",
-                column: "CourseID");
+                "IX_Grade_CourseID",
+                "Grade",
+                "CourseID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Grade_StudentID",
-                table: "Grade",
-                column: "StudentID");
+                "IX_Grade_StudentID",
+                "Grade",
+                "StudentID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Room_AccomodationID",
-                table: "Room",
-                column: "AccomodationID");
+                "IX_Room_AccomodationID",
+                "Room",
+                "AccomodationID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Student_ClassID",
-                table: "Student",
-                column: "ClassID");
+                "IX_Student_ClassID",
+                "Student",
+                "ClassID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Student_ClubAndSocietyID",
-                table: "Student",
-                column: "ClubAndSocietyID");
+                "IX_Student_ClubAndSocietyID",
+                "Student",
+                "ClubAndSocietyID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Student_RoomID",
-                table: "Student",
-                column: "RoomID");
+                "IX_Student_RoomID",
+                "Student",
+                "RoomID");
 
             migrationBuilder.CreateIndex(
-                name: "admin_sub",
-                table: "Subscription",
-                column: "Admin_ID",
+                "admin_sub",
+                "Subscription",
+                "Admin_ID",
                 unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CreditCard");
+                "CreditCard");
 
             migrationBuilder.DropTable(
-                name: "Grade");
+                "Grade");
 
             migrationBuilder.DropTable(
-                name: "Subscription");
+                "Subscription");
 
             migrationBuilder.DropTable(
-                name: "Course");
+                "Course");
 
             migrationBuilder.DropTable(
-                name: "Student");
+                "Student");
 
             migrationBuilder.DropTable(
-                name: "Admin");
+                "Admin");
 
             migrationBuilder.DropTable(
-                name: "Teacher");
+                "Teacher");
 
             migrationBuilder.DropTable(
-                name: "Class");
+                "Class");
 
             migrationBuilder.DropTable(
-                name: "ClubAndSociety");
+                "ClubAndSociety");
 
             migrationBuilder.DropTable(
-                name: "Room");
+                "Room");
 
             migrationBuilder.DropTable(
-                name: "Accomodation");
+                "Accomodation");
         }
     }
 }

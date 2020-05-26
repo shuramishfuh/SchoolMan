@@ -3,7 +3,7 @@ using Models.EntityInterfaces;
 
 namespace Models.Entities
 {
-    public  class Class : IClass
+    public class Class : IClass
     {
         public Class()
         {

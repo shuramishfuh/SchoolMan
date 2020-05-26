@@ -4,7 +4,7 @@ using Models.EntityInterfaces;
 
 namespace Models.Entities
 {
-    public  class Admin : IAdmin
+    public class Admin : IAdmin
     {
         public Admin()
         {

@@ -4,7 +4,7 @@ using Models.EntityInterfaces;
 
 namespace Models.Entities
 {
-    public  class Teacher : ITeacher
+    public class Teacher : ITeacher
     {
         public Teacher()
         {

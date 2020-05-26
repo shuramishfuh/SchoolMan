@@ -8,14 +8,11 @@ namespace Models.EntityConfigurations
     {
         public void Configure(EntityTypeBuilder<Accomodation> builder)
         {
-            
-            
-                builder.Property(e => e.Id).HasColumnName("ID");
+            builder.Property(e => e.Id).HasColumnName("ID");
 
-                builder.Property(e => e.Name)
-                    .IsRequired()
-                    .HasMaxLength(50);
-          
+            builder.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(50);
         }
     }
 }

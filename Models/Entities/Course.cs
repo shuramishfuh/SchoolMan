@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Models.EntityInterfaces;
 
 namespace Models.Entities
 {
-    public  class Course : ICourse
+    public class Course : ICourse
     {
         public Course()
         {

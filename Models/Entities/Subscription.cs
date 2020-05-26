@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using Models.EntityInterfaces;
 
 namespace Models.Entities
 {
-    public  class Subscription : ISubscription
+    public class Subscription : ISubscription
     {
         public int Id { get; set; }
         public string Type { get; set; }

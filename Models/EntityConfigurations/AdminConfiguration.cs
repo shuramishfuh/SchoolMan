@@ -4,7 +4,7 @@ using Models.Entities;
 
 namespace Models.builderConfigurations
 {
-    class AdminConfiguration :IEntityTypeConfiguration<Admin>
+    internal class AdminConfiguration : IEntityTypeConfiguration<Admin>
     {
         public void Configure(EntityTypeBuilder<Admin> builder)
         {

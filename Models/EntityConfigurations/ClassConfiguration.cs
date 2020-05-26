@@ -4,17 +4,15 @@ using Models.Entities;
 
 namespace Models.EntityConfigurations
 {
-    class ClassConfiguration :IEntityTypeConfiguration<Class>
+    internal class ClassConfiguration : IEntityTypeConfiguration<Class>
     {
         public void Configure(EntityTypeBuilder<Class> builder)
         {
-           
-                builder.Property(e => e.Id).HasColumnName("ID");
+            builder.Property(e => e.Id).HasColumnName("ID");
 
-                builder.Property(e => e.Name)
-                    .IsRequired()
-                    .HasMaxLength(50);
-          
+            builder.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(50);
         }
     }
 }

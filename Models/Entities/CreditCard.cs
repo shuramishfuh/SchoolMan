@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using Models.EntityInterfaces;
 
 namespace Models.Entities
 {
-    public  class CreditCard : ICreditCard
+    public class CreditCard : ICreditCard
     {
         public int Id { get; set; }
         public string CreditCardNumber { get; set; }
