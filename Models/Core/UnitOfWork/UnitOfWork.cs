@@ -1,10 +1,11 @@
-﻿using Models.Core.Interfaces;
+﻿using DAL.Repositories;
+using Models.Core.Interfaces;
 using Models.Core.Repositories;
 using Models.DataAccess.DataContext;
 
 namespace Models.Core.UnitOfWork
 {
-    internal class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly SchoolAppContext _context;
 
@@ -16,9 +17,13 @@ namespace Models.Core.UnitOfWork
         {
             _context = context;
             Courses = new CourseRepository(_context);
+            Events = new EventRepository(_context);
         }
 
         public ICourseRepository Courses { get; }
+
+        public IEventRepository Events { get; }
+
         //complete unit of work by saving all changes to the database
         public int Complete()
         {
@@ -30,4 +35,5 @@ namespace Models.Core.UnitOfWork
             _context.Dispose();
         }
     }
+     
 }

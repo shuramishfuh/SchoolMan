@@ -1,13 +1,19 @@
-﻿//using System;
-//using DAL.Interfaces;
-//using Models.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Models.Core.Interfaces;
+using Models.Core.Repositories;
+using Models.DataAccess.DataContext;
+using Models.Entities;
 
-//namespace DAL.Repositories
-//{
-//    class EventRepository 
-//    {
+namespace DAL.Repositories
+{
+   public class EventRepository : Repository<Event>, IEventRepository
+    {
+        public EventRepository(SchoolAppContext context) : base(context)
+        {
+        }
+    }    
+
     
-//    }
 
-  
-//}
+
+}

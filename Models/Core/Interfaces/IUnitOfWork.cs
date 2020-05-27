@@ -4,9 +4,10 @@ using System.Text;
 
 namespace Models.Core.Interfaces
 {
-    interface IUnitOfWork :IDisposable
+   public interface IUnitOfWork :IDisposable
     {
         ICourseRepository Courses { get; }
+        IEventRepository Events { get; }
         int Complete();
     }
 }

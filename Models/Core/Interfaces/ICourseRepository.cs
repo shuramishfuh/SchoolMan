@@ -3,7 +3,7 @@ using Models.Entities;
 
 namespace Models.Core.Interfaces
 {
-    interface ICourseRepository : IRepository<Course>
+    public interface ICourseRepository : IRepository<Course>
     {
         /// <summary>
         /// 
