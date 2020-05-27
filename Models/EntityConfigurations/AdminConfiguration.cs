@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Models.Entities;
 
-namespace Models.builderConfigurations
+namespace Models.EntityConfigurations
 {
     internal class AdminConfiguration : IEntityTypeConfiguration<Admin>
     {
@@ -12,7 +12,8 @@ namespace Models.builderConfigurations
 
             builder.Property(e => e.Dob)
                 .HasColumnName("DOB")
-                .HasColumnType("date");
+                .HasColumnType("date")
+                .IsRequired();
 
             builder.Property(e => e.Email)
                 .IsRequired()
@@ -26,7 +27,9 @@ namespace Models.builderConfigurations
                 .IsRequired()
                 .HasMaxLength(50);
 
-            builder.Property(e => e.SignUp).HasColumnType("date");
+            builder.Property(e => e.SignUp)
+                .HasColumnType("date")
+                .HasDefaultValueSql("GetDate()");
 
             builder.Property(e => e.UserName)
                 .IsRequired()

@@ -90,3 +90,9 @@ C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\AllTest\obj\Debug\netcor
 C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\AllTest\obj\Debug\netcoreapp3.1\AllTest.AssemblyInfo.cs
 C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\AllTest\obj\Debug\netcoreapp3.1\AllTest.csproj.CopyComplete
 C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\AllTest\obj\Debug\netcoreapp3.1\AllTest.genruntimeconfig.cache
+C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\AllTest\bin\Debug\netcoreapp3.1\AllTest.pdb
+C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\AllTest\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\AllTest\bin\Debug\netcoreapp3.1\Moq.dll
+C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\AllTest\obj\Debug\netcoreapp3.1\AllTest.csproj.CoreCompileInputs.cache
+C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\AllTest\obj\Debug\netcoreapp3.1\AllTest.dll
+C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\AllTest\obj\Debug\netcoreapp3.1\AllTest.pdb

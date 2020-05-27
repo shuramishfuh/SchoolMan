@@ -10,6 +10,11 @@
     <None Remove="Context\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="DataAccess\Migratioins\20200527172717_Add_required_to_admind_DOB.cs" />
+    <Compile Remove="DataAccess\Migratioins\20200527172717_Add_required_to_admind_DOB.Designer.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="5.2.0" />

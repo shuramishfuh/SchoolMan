@@ -65,7 +65,9 @@ namespace Models.DataAccess.Migrations
                         .HasMaxLength(50);
 
                     b.Property<DateTime>("SignUp")
-                        .HasColumnType("date");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("date")
+                        .HasDefaultValueSql("GetDate()");
 
                     b.Property<string>("UserName")
                         .IsRequired()
