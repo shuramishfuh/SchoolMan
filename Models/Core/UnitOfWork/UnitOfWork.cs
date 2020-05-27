@@ -1,5 +1,4 @@
-﻿using DAL.Repositories;
-using Models.Core.Interfaces;
+﻿using Models.Core.Interfaces;
 using Models.Core.Repositories;
 using Models.DataAccess.DataContext;
 

@@ -4,7 +4,7 @@ using Models.Entities;
 
 namespace Models.EntityConfigurations 
 {
-    class EventConfiguration : IEntityTypeConfiguration<Event>
+   internal class EventConfiguration : IEntityTypeConfiguration<Event>
     {
         
         public void Configure(EntityTypeBuilder<Event> builder)

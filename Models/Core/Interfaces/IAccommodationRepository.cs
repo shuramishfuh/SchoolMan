@@ -1,9 +1,8 @@
-﻿using Models.Core.Interfaces;
-using Models.Entities;
+﻿using Models.Entities;
 
 namespace Models.Core.Interfaces
 {
-    interface IAccommodationRepository : IRepository<Accomodation>
+   public interface IAccommodationRepository : IRepository<Accomodation>
     {
     }
 }

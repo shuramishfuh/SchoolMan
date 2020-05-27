@@ -1,8 +1,8 @@
-﻿//using Models.Entities;
+﻿using Models.Entities;
 
-//namespace DAL.Interfaces
-//{
-//    interface  IClubAndSocietiesRepository :IRepository<ClubAndSociety>
-//    {
-//    }
-//}
+namespace Models.Core.Interfaces
+{
+   public interface IClubAndSocietiesRepository : IRepository<ClubAndSociety>
+    {
+    }
+}

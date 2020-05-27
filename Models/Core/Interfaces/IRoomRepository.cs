@@ -2,7 +2,7 @@
 
 namespace Models.Core.Interfaces
 {
-   public interface IStudentRepository : IRepository<Student>
+  public  interface IRoomRepository :IRepository<Room>
     {
     }
 }

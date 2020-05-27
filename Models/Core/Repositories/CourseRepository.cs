@@ -5,7 +5,7 @@ using Models.Entities;
 
 namespace Models.Core.Repositories
 {
-    class CourseRepository :Repository<Course>, ICourseRepository
+   public class CourseRepository :Repository<Course>, ICourseRepository
     {
         public CourseRepository(SchoolAppContext context) : base(context)
         {

@@ -4,7 +4,7 @@ using Models.Entities;
 
 namespace Models.EntityConfigurations
 {
-    public class AccomodationConfiguration : IEntityTypeConfiguration<Accomodation>
+    internal class AccomodationConfiguration : IEntityTypeConfiguration<Accomodation>
     {
         public void Configure(EntityTypeBuilder<Accomodation> builder)
         {

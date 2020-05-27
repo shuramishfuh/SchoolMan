@@ -1,8 +1,8 @@
-﻿//using Models.Entities;
+﻿using Models.Entities;
 
-//namespace DAL.Interfaces
-//{
-//    interface ITeacherRepository : IRepository<Teacher>
-//    {
-//    }
-//}
+namespace Models.Core.Interfaces
+{
+  public  interface ITeacherRepository : IRepository<Teacher>
+    {
+    }
+}

@@ -1,10 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Models.Core.Interfaces;
-using Models.Core.Repositories;
+﻿using Models.Core.Interfaces;
 using Models.DataAccess.DataContext;
 using Models.Entities;
 
-namespace DAL.Repositories
+namespace Models.Core.Repositories
 {
    public class EventRepository : Repository<Event>, IEventRepository
     {

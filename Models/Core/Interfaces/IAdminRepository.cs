@@ -1,8 +1,8 @@
-﻿//using Models.Entities;
+﻿using Models.Entities;
 
-//namespace DAL.Interfaces
-//{
-//    interface IAdminRepository :IRepository<Admin>
-//    {
-//    }
-//}
+namespace Models.Core.Interfaces
+{
+   public interface IAdminRepository : IRepository<Admin>
+    {
+    }
+}

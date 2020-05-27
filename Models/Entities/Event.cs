@@ -14,7 +14,7 @@ namespace Models.Entities
    public enum EventType :byte
    {
        Competition,
-       Intenship,
+       Internship,
        Scholarship,
        Jobs,
        Others
