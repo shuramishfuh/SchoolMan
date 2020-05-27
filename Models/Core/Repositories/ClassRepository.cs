@@ -9,5 +9,10 @@ namespace Models.Core.Repositories
         public ClassRepository(DbContext context) : base(context)
         {
         }
+
+        public void UpdateClass()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

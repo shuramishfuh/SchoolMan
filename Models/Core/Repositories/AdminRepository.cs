@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Models.Core.Interfaces;
 using Models.Entities;
+using Models.EntityInterfaces;
 
 namespace Models.Core.Repositories
 {
@@ -8,6 +9,11 @@ namespace Models.Core.Repositories
     {
         public AdminRepository(DbContext context) : base(context)
         {
+        }
+
+        public void UpdateAdmin(IAdmin admin)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

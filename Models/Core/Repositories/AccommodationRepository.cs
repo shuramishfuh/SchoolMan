@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Models.Core.Interfaces;
 using Models.Entities;
+using Models.EntityInterfaces;
 
 namespace Models.Core.Repositories
 {
@@ -8,6 +9,11 @@ namespace Models.Core.Repositories
     {
         public AccommodationRepository(DbContext context) : base(context)
         {
+        }
+
+        public void UpdateAccomodation(IAccomodation accomodation)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

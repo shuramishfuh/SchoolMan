@@ -1,9 +1,10 @@
 ﻿using System;
+using Models.EntityInterfaces;
 
 namespace Models.Entities
 {
-   public class Event
-    {
+   public class Event : IEvent
+   {
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime Date { get; set; }

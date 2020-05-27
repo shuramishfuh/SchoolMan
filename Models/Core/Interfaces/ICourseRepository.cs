@@ -1,15 +1,14 @@
-﻿using System.Collections.Generic;
-using Models.Entities;
+﻿using Models.Entities;
+using Models.EntityInterfaces;
 
 namespace Models.Core.Interfaces
 {
     public interface ICourseRepository : IRepository<Course>
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="className"> get top performing course per class</param>
-        /// <returns></returns>
-        IEnumerable<Course> GetHigestPerformingCoursesPerClass(string className);
+    {/// <summary>
+    /// Updates course
+    /// </summary>
+    /// <param name="course">course</param>
+        void UpdateCourse(ICourse course);
+        
     }
 }

@@ -2,6 +2,7 @@
 using Models.Core.Interfaces;
 using Models.DataAccess.DataContext;
 using Models.Entities;
+using Models.EntityInterfaces;
 
 namespace Models.Core.Repositories
 {
@@ -17,6 +18,11 @@ namespace Models.Core.Repositories
         }
 
         public IEnumerable<Course> GetHigestPerformingCoursesPerClass(string className)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void UpdateCourse(ICourse course)
         {
             throw new System.NotImplementedException();
         }
