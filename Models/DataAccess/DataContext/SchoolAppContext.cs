@@ -5,7 +5,7 @@ using Models.EntityConfigurations;
 
 namespace Models.DataAccess.DataContext
 {
-public partial class SchoolAppContext : DbContext
+public  class SchoolAppContext : DbContext
     {
         public SchoolAppContext()
         {
@@ -17,6 +17,7 @@ public partial class SchoolAppContext : DbContext
         }
 
         public virtual DbSet<Accomodation> Accomodation { get; set; }
+        public virtual DbSet<Event> Events { get; set; }
         public virtual DbSet<Admin> Admin { get; set; }
         public virtual DbSet<Class> Class { get; set; }
         public virtual DbSet<ClubAndSociety> ClubAndSociety { get; set; }
@@ -32,7 +33,7 @@ public partial class SchoolAppContext : DbContext
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+
                 optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Manangement;Integrated Security=True");
             }
         }
@@ -41,6 +42,7 @@ public partial class SchoolAppContext : DbContext
         {
             
             modelBuilder.ApplyConfiguration(new AccomodationConfiguration());
+            modelBuilder.ApplyConfiguration(new EventConfiguration());
             modelBuilder.ApplyConfiguration(new AdminConfiguration());
             modelBuilder.ApplyConfiguration(new ClassConfiguration());
             modelBuilder.ApplyConfiguration(new ClubAndSocietyConfiguration());
@@ -51,9 +53,9 @@ public partial class SchoolAppContext : DbContext
             modelBuilder.ApplyConfiguration(new StudentConfiguration());
             modelBuilder.ApplyConfiguration(new SubscriptionConfiguration());
             modelBuilder.ApplyConfiguration(new TeacherConfiguration());
-            //OnModelCreatingPartial(modelBuilder);
+       
         }
 
-        // partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+        
     }
 }

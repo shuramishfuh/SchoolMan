@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Models.DataAccess.Migratioins
+namespace Models.DataAccess.Migrations
 {
-    public partial class Init : Migration
+    public partial class initial_ : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -63,6 +63,22 @@ namespace Models.DataAccess.Migratioins
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ClubAndSociety", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Events",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(maxLength: 50, nullable: false),
+                    Date = table.Column<DateTime>(type: "date", nullable: false, defaultValueSql: "GetDate()"),
+                    Type = table.Column<string>(nullable: false),
+                    Description = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Events", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -289,6 +305,9 @@ namespace Models.DataAccess.Migratioins
         {
             migrationBuilder.DropTable(
                 name: "CreditCard");
+
+            migrationBuilder.DropTable(
+                name: "Events");
 
             migrationBuilder.DropTable(
                 name: "Grade");
