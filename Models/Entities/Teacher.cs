@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Models.EntityInterfaces;
 
 namespace Models.Entities
-{
+{//  has default password Tpassword
     public class Teacher : ITeacher
     {
         public Teacher()

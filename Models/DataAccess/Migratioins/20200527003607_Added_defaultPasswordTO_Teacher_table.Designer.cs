@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Models.DataAccess.DataContext;
 
 namespace Models.DataAccess.Migrations
 {
     [DbContext(typeof(SchoolAppContext))]
-    partial class SchoolAppContextModelSnapshot : ModelSnapshot
+    [Migration("20200527003607_Added_defaultPasswordTO_Teacher_table")]
+    partial class Added_defaultPasswordTO_Teacher_table
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

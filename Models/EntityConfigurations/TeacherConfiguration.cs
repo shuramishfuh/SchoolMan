@@ -22,7 +22,8 @@ namespace Models.EntityConfigurations
 
             builder.Property(e => e.Password)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .HasDefaultValue("Tpassword");
 
             builder.Property(e => e.UserName)
                 .IsRequired()

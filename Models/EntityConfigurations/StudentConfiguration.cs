@@ -26,7 +26,8 @@ namespace Models.EntityConfigurations
 
             builder.Property(e => e.Password)
                 .IsRequired()
-                .HasColumnType("text");
+                .HasColumnType("text")
+                .HasDefaultValue("password");
 
             builder.Property(e => e.RoomId).HasColumnName("RoomID");
 
