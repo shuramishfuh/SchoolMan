@@ -11,7 +11,6 @@ C:\Users\MCFScholar\source\repos\SchoolMan\Models\bin\Debug\netcoreapp3.1\Models
 C:\Users\MCFScholar\source\repos\SchoolMan\Models\obj\Debug\netcoreapp3.1\Models.genruntimeconfig.cache
 C:\Users\MCFScholar\source\repos\SchoolMan\Models\obj\Debug\netcoreapp3.1\Models.csproj.CoreCompileInputs.cache
 C:\Users\MCFScholar\source\repos\SchoolMan\Models\bin\Debug\netcoreapp3.1\Models.dll.config
-C:\Users\MCFScholar\Source\Repos\shuramishfuh\SchoolMan\Models\bin\Debug\netcoreapp3.1\Models.dll.config
 C:\Users\MCFScholar\Source\Repos\shuramishfuh\SchoolMan\Models\bin\Debug\netcoreapp3.1\Models.deps.json
 C:\Users\MCFScholar\Source\Repos\shuramishfuh\SchoolMan\Models\bin\Debug\netcoreapp3.1\Models.runtimeconfig.json
 C:\Users\MCFScholar\Source\Repos\shuramishfuh\SchoolMan\Models\bin\Debug\netcoreapp3.1\Models.runtimeconfig.dev.json
@@ -22,5 +21,5 @@ C:\Users\MCFScholar\Source\Repos\shuramishfuh\SchoolMan\Models\obj\Debug\netcore
 C:\Users\MCFScholar\Source\Repos\shuramishfuh\SchoolMan\Models\obj\Debug\netcoreapp3.1\Models.dll
 C:\Users\MCFScholar\Source\Repos\shuramishfuh\SchoolMan\Models\obj\Debug\netcoreapp3.1\Models.pdb
 C:\Users\MCFScholar\Source\Repos\shuramishfuh\SchoolMan\Models\obj\Debug\netcoreapp3.1\Models.genruntimeconfig.cache
-C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\Models\obj\Debug\netcoreapp3.1\Models.csproj.CoreCompileInputs.cache
 C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\Models\obj\Debug\netcoreapp3.1\Models.csprojAssemblyReference.cache
+C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\Models\obj\Debug\netcoreapp3.1\Models.csproj.CoreCompileInputs.cache

@@ -19,9 +19,9 @@ namespace Models.ConfigForDependency_injection
                 .AsImplementedInterfaces();
 
             // register Context
-            builder.RegisterType<SchoolAppContext>().AsSelf();
+           // builder.RegisterType<SchoolAppContext>().AsSelf().InstancePerLifetimeScope();
             // register all classes here
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
             builder.RegisterType<Accomodation>().As<IAccomodation>();
             builder.RegisterType<Admin>().As<IAdmin>();
             builder.RegisterType<Class>().As<IClass>();

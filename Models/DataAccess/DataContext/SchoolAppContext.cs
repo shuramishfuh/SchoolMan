@@ -5,7 +5,8 @@ using Models.EntityConfigurations;
 namespace Models.DataAccess.DataContext
 {
 public  class SchoolAppContext : DbContext
-    {
+{
+  
         public SchoolAppContext()
         {
         }
@@ -13,6 +14,7 @@ public  class SchoolAppContext : DbContext
         public SchoolAppContext(DbContextOptions<SchoolAppContext> options)
             : base(options)
         {
+            this.ChangeTracker.LazyLoadingEnabled = false;
         }
 
         public virtual DbSet<Accomodation> Accomodation { get; set; }
@@ -31,9 +33,10 @@ public  class SchoolAppContext : DbContext
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-            {
-
-                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Manangement;Integrated Security=True");
+            {  
+                
+              // method implemented in parent class
+               // optionsBuilder.UseSqlServer();
             }
         }
 
