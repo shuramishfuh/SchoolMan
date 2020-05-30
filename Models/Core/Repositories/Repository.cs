@@ -41,6 +41,7 @@ namespace Models.Core.Repositories
             Context.Set<TEntity>().Add(entity);
         }
 
+
         public void AddRange(IEnumerable<TEntity> entities)
         {
             Context.Set<TEntity>().AddRange(entities);

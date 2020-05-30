@@ -14,7 +14,7 @@ public  class SchoolAppContext : DbContext
         public SchoolAppContext(DbContextOptions<SchoolAppContext> options)
             : base(options)
         {
-            this.ChangeTracker.LazyLoadingEnabled = false;
+           // this.ChangeTracker.LazyLoadingEnabled = false;
         }
 
         public virtual DbSet<Accomodation> Accomodation { get; set; }
