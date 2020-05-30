@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\WebAPI\\WebAPI.csproj": {}
+    "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj": {
+    "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj",
+        "projectPath": "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\MCFScholar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\Models\\obj\\",
+        "outputPath": "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -88,14 +88,14 @@
         }
       }
     },
-    "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\WebAPI\\WebAPI.csproj": {
+    "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\WebAPI\\WebAPI.csproj",
+        "projectPath": "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\WebAPI\\WebAPI.csproj",
         "packagesPath": "C:\\Users\\MCFScholar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -115,8 +115,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj"
+              "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj"
               }
             }
           }

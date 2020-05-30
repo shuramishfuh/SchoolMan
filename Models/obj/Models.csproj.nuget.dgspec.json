@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj": {}
+    "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj": {
+    "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj",
+        "projectPath": "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\MCFScholar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\Models\\obj\\",
+        "outputPath": "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

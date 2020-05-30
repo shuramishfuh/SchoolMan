@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kfLsJOgzqGR+T2JhgGgVJwXRhS7XO3H5FoQnf17f4WvJfbRjx9FHc4btul1EpSIJlNIit5QWrGrJ+eqbBUgI8g==",
+  "dgSpecHash": "TBZjnqkXzJTE+L53MxGW9yyHPdy8Hik5jP0iHk192l+e6TZTYMKvS3uVaewc+QhEj6ggE5oZBNcYq+80C4JlHQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\WebAPI\\WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MCFScholar\\.nuget\\packages\\autofac\\5.2.0\\autofac.5.2.0.nupkg.sha512",
     "C:\\Users\\MCFScholar\\.nuget\\packages\\autofac.extensions.dependencyinjection\\6.0.0\\autofac.extensions.dependencyinjection.6.0.0.nupkg.sha512",

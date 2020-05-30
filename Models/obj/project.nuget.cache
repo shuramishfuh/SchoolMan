@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Fp87846xIoAqOfj99EaSHDhXzQMNvlQUNmo72EyVgICEVeYf894R/lqYVgCcEsghF7d18IXVeJnZrjc8jciu6Q==",
+  "dgSpecHash": "71yIcQrLWPwaLbizAGPf1Q69Bm8+eOfiVO5BXjzlsIGchp0FTPwVGuz1suO4RLruvCtWfam2tY3hCetq8ftgfg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj",
+  "projectFilePath": "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\Models\\Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MCFScholar\\.nuget\\packages\\autofac\\5.2.0\\autofac.5.2.0.nupkg.sha512",
     "C:\\Users\\MCFScholar\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
