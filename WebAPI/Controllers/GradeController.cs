@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 using Models.Core.Interfaces;
 using Models.Entities;
@@ -19,6 +20,7 @@ namespace WebAPI.Controllers
         }
         // GET: api/<GradeController>
         [HttpGet]
+        [EnableQuery]
         public ActionResult<IEnumerable<IGrade>> Get()
         {
             var grade = _unitOfWork.Grades.GetAll();
@@ -31,6 +33,7 @@ namespace WebAPI.Controllers
 
         // GET api/<GradeController>/5
         [HttpGet("{id}")]
+        [EnableQuery]
         public ActionResult<IGrade> Get(int id)
         {
             var grade = _unitOfWork.Grades.SingleOrDefault(c => c.Id == id);

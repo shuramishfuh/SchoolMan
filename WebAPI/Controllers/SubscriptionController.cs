@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 using Models.Core.Interfaces;
 using Models.Entities;
@@ -19,6 +20,7 @@ namespace WebAPI.Controllers
         }
         // GET: api/<SubscriptionController>
         [HttpGet]
+        [EnableQuery]
         public ActionResult<IEnumerable<ISubscription>> Get()
         {
             var subscription = _unitOfWork.Subscriptions.GetAll();
@@ -31,6 +33,7 @@ namespace WebAPI.Controllers
 
         // GET api/<SubscriptionController>/5
         [HttpGet("{id}")]
+        [EnableQuery]
         public ActionResult<ISubscription> Get(int id)
         {
             var subscription = _unitOfWork.Subscriptions.SingleOrDefault(c => c.Id == id);

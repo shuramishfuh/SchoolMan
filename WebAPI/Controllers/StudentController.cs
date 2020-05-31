@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 using Models.Core.Interfaces;
 using Models.Entities;
@@ -17,8 +18,9 @@ namespace WebAPI.Controllers
         {
             _unitOfWork = unitOfWork;
         }
-        // GET: api/<StudentController>
+        // GET: api/<StudentController> 
         [HttpGet]
+        [EnableQuery]
         public ActionResult<IEnumerable<IStudent>> Get()
         {
             var student = _unitOfWork.Students.GetAll();
@@ -31,6 +33,7 @@ namespace WebAPI.Controllers
 
         // GET api/<StudentController>/5
         [HttpGet("{id}")]
+        [EnableQuery]
         public ActionResult<IStudent> Get(int id)
         {
             var student = _unitOfWork.Students.SingleOrDefault(c => c.Id == id);

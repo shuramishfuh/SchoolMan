@@ -1,5 +1,6 @@
-using System.Configuration;
+using System.Linq;
 using Autofac;
+using Microsoft.AspNet.OData.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -17,15 +18,15 @@ namespace WebAPI
         {
             Configuration = configuration;
             var builder = new ConfigurationBuilder()
-       .SetBasePath(env.ContentRootPath)
-       .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-       .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-       .AddEnvironmentVariables();
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)  
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddEnvironmentVariables();
             this.Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
-        public ILifetimeScope AutofacContainer { get; private set; }
+        //public ILifetimeScope AutofacContainer { get; private set; }
 
         // ConfigureContainer is where you can register things directly
         // with Autofac. This runs after ConfigureServices so the things
@@ -42,10 +43,13 @@ namespace WebAPI
         {
             // get connection string from appsettings
             var coon = Configuration["Logging:ConnectionStrings:IndividualSchoolDatabase"].ToString();
+            
+            services.AddControllers().AddNewtonsoftJson();
 
-            services.AddControllers();
-            // build schoolappCOntext with connection string from appseetings
+            // build schoolappCOntext with connection string from appsetings
             services.AddDbContext<SchoolAppContext>(option => option.UseSqlServer(coon));
+
+            services.AddOData();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,6 +69,10 @@ namespace WebAPI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                // enable odata
+                endpoints.EnableDependencyInjection();
+                endpoints.Count().Select().OrderBy().Filter().Expand();
+
             });
         }
     }

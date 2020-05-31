@@ -53,5 +53,14 @@ C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\WebAPI\bin\Debug\netcore
 C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\WebAPI\bin\Debug\netcoreapp3.1\Models.pdb
 C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj.CopyComplete
 C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
+C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.OData.dll
+C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.OData.Core.dll
+C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.OData.Edm.dll
+C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Spatial.dll
+C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\WebAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\WebAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\MCFScholar\source\repos\shuramishfuh\SchoolMan\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache

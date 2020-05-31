@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 using Models.Core.Interfaces;
 using Models.Entities;
@@ -23,6 +24,7 @@ namespace WebAPI.Controllers
         }
         // GET: api/<EventController>
         [HttpGet]
+        [EnableQuery]
         public ActionResult<IEnumerable<IEvent>> Get()
         {
             var @event = _unitOfWork.Events.GetAll();
@@ -35,6 +37,7 @@ namespace WebAPI.Controllers
 
         // GET api/<EventController>/5
         [HttpGet("{id}")]
+        [EnableQuery]
         public ActionResult<IEvent> Get(int id)
         {
             var @event = _unitOfWork.Events.SingleOrDefault(c => c.Id == id);

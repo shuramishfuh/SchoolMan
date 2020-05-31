@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\AllTest\\AllTest.csproj": {}
+    "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\AllTest\\AllTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\AllTest\\AllTest.csproj": {
+    "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\AllTest\\AllTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\AllTest\\AllTest.csproj",
+        "projectUniqueName": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\AllTest\\AllTest.csproj",
         "projectName": "AllTest",
-        "projectPath": "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\AllTest\\AllTest.csproj",
+        "projectPath": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\AllTest\\AllTest.csproj",
         "packagesPath": "C:\\Users\\MCFScholar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\AllTest\\obj\\",
+        "outputPath": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\AllTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

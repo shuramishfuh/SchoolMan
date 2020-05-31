@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Lw5ksaOyt26XgJ+WrRmF+LfpybkIlmXcAy3mf7WL6HucBJZkQW+Mn4QBwPJ485HJjeMr6zcVJQOkkfsQ0o6ZXg==",
+  "dgSpecHash": "juPllDytMu9vqngr3eM9I6hm1+ES6owHoPIyteRQ5mitulbjclkQtAdhhUYPzmQYcGXcl8l/WIHCJ/Zz3RmBbA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MCFScholar\\Source\\Repos\\shuramishfuh\\SchoolMan\\AllTest\\AllTest.csproj",
+  "projectFilePath": "C:\\Users\\MCFScholar\\source\\repos\\shuramishfuh\\SchoolMan\\AllTest\\AllTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MCFScholar\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\MCFScholar\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",

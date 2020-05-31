@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 using Models.Core.Interfaces;
 using Models.Entities;
@@ -19,6 +20,7 @@ namespace WebAPI.Controllers
         }
         // GET: api/<RoomController>
         [HttpGet]
+        [EnableQuery]
         public ActionResult<IEnumerable<IRoom>> Get()
         {
             var room = _unitOfWork.Rooms.GetAll();
@@ -31,6 +33,7 @@ namespace WebAPI.Controllers
 
         // GET api/<RoomController>/5
         [HttpGet("{id}")]
+        [EnableQuery]
         public ActionResult<IRoom> Get(int id)
         {
             var room = _unitOfWork.Rooms.SingleOrDefault(c => c.Id == id);

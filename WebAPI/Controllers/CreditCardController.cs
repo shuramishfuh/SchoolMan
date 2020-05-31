@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 using Models.Core.Interfaces;
 using Models.Entities;
@@ -20,6 +21,7 @@ namespace WebAPI.Controllers
         }
         // GET: api/<CreditCardController>
         [HttpGet]
+        [EnableQuery]
         public ActionResult<IEnumerable<ICreditCard>> Get()
         {
             var cc = _unitOfWork.CreditCards.GetAll();
@@ -32,6 +34,7 @@ namespace WebAPI.Controllers
 
         // GET api/<CreditCardController>/5
         [HttpGet("{id}")]
+        [EnableQuery]
         public ActionResult<ICreditCard> Get(int id)
         {
             var cc = _unitOfWork.CreditCards.SingleOrDefault(c => c.Id == id);

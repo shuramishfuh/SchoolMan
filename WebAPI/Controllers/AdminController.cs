@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 using Models.Core.Interfaces;
 using Models.Entities;
@@ -19,6 +20,7 @@ namespace WebAPI.Controllers
         }
         // GET: api/<AdminController>
         [HttpGet]
+        [EnableQuery]
         public ActionResult<IEnumerable<IAdmin>> Get()
         {
             var admin = _unitOfWork.Admins.GetAll();
@@ -31,6 +33,7 @@ namespace WebAPI.Controllers
 
         // GET api/<AdminController>/5
         [HttpGet("{id}")]
+        [EnableQuery]
         public ActionResult<IAdmin> Get(int id)
         {
             var admin = _unitOfWork.Admins.SingleOrDefault(c => c.Id == id);

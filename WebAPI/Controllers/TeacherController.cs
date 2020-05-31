@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 using Models.Core.Interfaces;
 using Models.Entities;
@@ -19,6 +20,7 @@ namespace WebAPI.Controllers
         }
         // GET: api/<TeacherController>
         [HttpGet]
+        [EnableQuery]
         public ActionResult<IEnumerable<ITeacher>> Get()
         {
             var teacher = _unitOfWork.Teacher.GetAll();
@@ -31,6 +33,7 @@ namespace WebAPI.Controllers
 
         // GET api/<TeacherController>/5
         [HttpGet("{id}")]
+        [EnableQuery]
         public ActionResult<ITeacher> Get(int id)
         {
             var teacher = _unitOfWork.Teacher.SingleOrDefault(c => c.Id == id);

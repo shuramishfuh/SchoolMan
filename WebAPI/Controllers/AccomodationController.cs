@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 using Models.Core.Interfaces;
 using Models.Entities;
@@ -19,6 +20,7 @@ namespace WebAPI.Controllers
         }
         // GET: api/<AccomodationController>
         [HttpGet]
+        [EnableQuery]
         public ActionResult<IEnumerable<IAccomodation>> Get()
         {
             var accom = _unitOfWork.Accommodations.GetAll();
@@ -31,6 +33,7 @@ namespace WebAPI.Controllers
 
         // GET api/<AccomodationController>/5
         [HttpGet("{id}")]
+        [EnableQuery]
         public ActionResult<IAccomodation> Get(int id)
         {
             var accom = _unitOfWork.Accommodations.SingleOrDefault(c => c.Id == id);
