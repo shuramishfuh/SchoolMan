@@ -4,11 +4,16 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./components/CustomThemes";
+import { BrowserRouter as Router } from "react-router-dom";
+import { CssBaseline } from "@material-ui/core";
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <App />
+      <Router>
+        <CssBaseline />
+        <App />
+      </Router>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")

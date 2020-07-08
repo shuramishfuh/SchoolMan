@@ -1,12 +1,16 @@
 import React from "react";
-import CssBaseline from "@material-ui/core/CssBaseline";
+import { Route, Switch } from "react-router-dom";
 import DemoPage from "./components/DemoPage";
+import RegistrationPage from "./components/RegistrationPage";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (
     <>
-      <CssBaseline />
-      <DemoPage />
+      <Switch>
+        <Route exact path="/register" component={RegistrationPage}></Route>
+        <Route exact path="/demo" component={DemoPage}></Route>
+      </Switch>
     </>
   );
 };
