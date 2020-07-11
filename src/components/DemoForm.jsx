@@ -1,8 +1,17 @@
 import React from "react";
-import { Typography, Button } from "@material-ui/core";
+import {
+  Typography,
+  Button,
+  Grid,
+  Select,
+  InputLabel,
+  FormControl,
+} from "@material-ui/core";
+import MenuItem from "@material-ui/core/MenuItem";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import { useFormik } from "formik";
-import { Form, Col } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import * as yup from "yup";
 
 const initialValues = {
@@ -19,12 +28,14 @@ const validationSchema = yup.object({
   typeOfInstitute: yup.string().required("required"),
 });
 
-const DemoForm = () => {
-  const useStyles = makeStyles({
+const DemoForm = ({ history }) => {
+  const isSmallWidth = useMediaQuery("(max-width: 600px)");
+
+  const useStyles = makeStyles((theme) => ({
     buttonStyles: {
       backgroundColor: "rgba(77, 67, 75, 1.0)",
       "&:hover": {
-        backgroundColor: "rgba(77, 67, 75, 0.75)",
+        backgroundColor: "rgba(0, 0, 0, 0.75)",
       },
     },
     buttonTextStyles: {
@@ -33,9 +44,20 @@ const DemoForm = () => {
     errorMessage: {
       color: "red",
     },
-  });
+    formStyles: {
+      width: 400,
+    },
+    formControlStyles: {
+      width: 400,
+    },
+    menuItemStyles: {
+      backgroundColor: theme.palette.secondary.main,
+      color: "black",
+    },
+  }));
 
   const classes = useStyles();
+  console.log("history demo", history);
 
   const formik = useFormik({
     initialValues,
@@ -45,11 +67,16 @@ const DemoForm = () => {
     validationSchema,
   });
 
+  const onSubmit = () => {
+    formik.handleSubmit();
+    history.push("/register");
+  };
+
   console.log("errors", formik.errors);
 
   return (
-    <Form onSubmit={formik.handleSubmit}>
-      <Form.Group as={Col}>
+    <Form onSubmit={onSubmit} className={classes.formStyles}>
+      <Form.Group>
         <Form.Label htmlFor="name">Name</Form.Label>
         <Form.Control
           type="text"
@@ -65,7 +92,7 @@ const DemoForm = () => {
         ) : null}
       </Form.Group>
 
-      <Form.Group as={Col}>
+      <Form.Group>
         <Form.Label htmlFor="corporateEmail">Corporate email</Form.Label>
         <Form.Control
           type="email"
@@ -81,7 +108,7 @@ const DemoForm = () => {
         ) : null}
       </Form.Group>
 
-      <Form.Group as={Col}>
+      <Form.Group>
         <Form.Label htmlFor="cityOrTown">City/Town</Form.Label>
         <Form.Control
           type="text"
@@ -97,27 +124,51 @@ const DemoForm = () => {
         ) : null}
       </Form.Group>
 
-      <Form.Group as={Col}>
-        <Form.Label htmlFor="typeOfInstitute">Type of Institute</Form.Label>
-        <Form.Control
-          type="text"
+      <FormControl className={classes.formControlStyles}>
+        <InputLabel htmlFor="typeOfInstitute">
+          <Typography color="textPrimary" style={{ fontSize: 14 }}>
+            Type of Institute
+          </Typography>
+        </InputLabel>
+        <Select
           id="typeOfInstitute"
           name="typeOfInstitute"
-          placeholder="Type of Institute"
           {...formik.getFieldProps("typeOfInstitute")}
-        />
+        >
+          <MenuItem value="" className={classes.menuItemStyles}>
+            <em>None</em>
+          </MenuItem>
+          <MenuItem
+            value="Secondary/High School"
+            className={classes.menuItemStyles}
+          >
+            Secondary/High School
+          </MenuItem>
+          <MenuItem value="University" className={classes.menuItemStyles}>
+            University
+          </MenuItem>
+          <MenuItem value="Academy" className={classes.menuItemStyles}>
+            Academy
+          </MenuItem>
+        </Select>
         {formik.touched.typeOfInstitute && formik.errors.typeOfInstitute ? (
           <small className={classes.errorMessage}>
             Type of Institute is a required field
           </small>
         ) : null}
-      </Form.Group>
+      </FormControl>
 
-      <Button type="submit" className={classes.buttonStyles}>
-        <Typography className={classes.buttonTextStyles}>
-          Request Demo
-        </Typography>
-      </Button>
+      <br />
+      <br />
+      <br />
+
+      <Grid item container alignItems="center" justify="center">
+        <Button type="submit" className={classes.buttonStyles}>
+          <Typography className={classes.buttonTextStyles}>
+            Request Demo
+          </Typography>
+        </Button>
+      </Grid>
     </Form>
   );
 };

@@ -5,22 +5,16 @@ import Typography from "@material-ui/core/Typography";
 import DemoForm from "./DemoForm";
 
 const DemoPage = (props) => {
+  const { history } = props;
+  console.log("history props", history);
+
   const useStyles = makeStyles((theme) => ({
-    PageLeft: {},
-    PageMiddle: {},
-    PageRight: {},
-    PageContainer: {
-      backgroundColor: theme.palette.primary.main,
-      height: window.outerHeight,
-    },
     middleHeader: {
       height: 150,
     },
     middleBody: {
       height: 300,
-    },
-    middleFooter: {
-      height: 50,
+      margin: 5,
     },
     middleHeaderText: {
       fontSize: 40,
@@ -29,19 +23,17 @@ const DemoPage = (props) => {
   }));
 
   const classes = useStyles();
+  console.log("props", props);
 
   return (
-    <Grid container direction="row" className={classes.PageContainer}>
-      <Grid item className={classes.PageLeft} xs={false} sm={2}>
-        This is the grid side
-      </Grid>
+    <Grid container direction="row">
+      <Grid item xs={false} sm={2}></Grid>
       <Grid
         item
         container
         direction="column"
         justify="center"
         alignItems="center"
-        className={classes.PageMiddle}
         xs={12}
         sm={8}
       >
@@ -56,7 +48,13 @@ const DemoPage = (props) => {
             MyDS Platform Demo
           </Typography>
         </Grid>
-        <Grid item className={classes.middleBody}>
+        <Grid
+          item
+          container
+          className={classes.middleBody}
+          alignItems="center"
+          justify="center"
+        >
           <p>
             See for yourself why institutions from all educational stages trust
             MyDS to bring their people, operations and data together in one
@@ -66,12 +64,10 @@ const DemoPage = (props) => {
             Booking a MyDS demo now will connect you to an expert who will help
             you to discover the platform at your own pace.
           </p>
-          <DemoForm />
+          <DemoForm history={history} />
         </Grid>
       </Grid>
-      <Grid item className={classes.PageRight} xs={false} sm={2}>
-        This is the grid side
-      </Grid>
+      <Grid item className={classes.PageRight} xs={false} sm={2}></Grid>
     </Grid>
   );
 };
