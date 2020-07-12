@@ -29,7 +29,7 @@ const validationSchema = yup.object({
 });
 
 const DemoForm = ({ history }) => {
-  const isSmallWidth = useMediaQuery("(max-width: 600px)");
+  const isXSWidth = useMediaQuery("(max-width: 400px)");
 
   const useStyles = makeStyles((theme) => ({
     buttonStyles: {
@@ -45,10 +45,10 @@ const DemoForm = ({ history }) => {
       color: "red",
     },
     formStyles: {
-      width: 400,
+      width: isXSWidth ? 300 : 400,
     },
     formControlStyles: {
-      width: 400,
+      width: isXSWidth ? 300 : 400,
     },
     menuItemStyles: {
       backgroundColor: theme.palette.secondary.main,
@@ -57,7 +57,6 @@ const DemoForm = ({ history }) => {
   }));
 
   const classes = useStyles();
-  console.log("history demo", history);
 
   const formik = useFormik({
     initialValues,

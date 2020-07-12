@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import DemoPage from "./components/DemoPage";
 import RegistrationPage from "./components/RegistrationPage";
 import "bootstrap/dist/css/bootstrap.min.css";
+import SubscribePage from "./components/SubscribePage";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Switch>
         <Route exact path="/register" component={RegistrationPage}></Route>
         <Route exact path="/demo" component={DemoPage}></Route>
+        <Route exact path="/subscribe" component={SubscribePage}></Route>
       </Switch>
     </>
   );

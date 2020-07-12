@@ -1,16 +1,18 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Typography from "@material-ui/core/Typography";
 import DemoForm from "./DemoForm";
 
 const DemoPage = (props) => {
   const { history } = props;
-  console.log("history props", history);
 
-  const useStyles = makeStyles((theme) => ({
+  const isXSWidth = useMediaQuery("(max-width: 400px)");
+
+  const useStyles = makeStyles({
     middleHeader: {
-      height: 150,
+      height: isXSWidth ? 200 : 150,
     },
     middleBody: {
       height: 300,
@@ -20,10 +22,9 @@ const DemoPage = (props) => {
       fontSize: 40,
       fontWeight: "bold",
     },
-  }));
+  });
 
   const classes = useStyles();
-  console.log("props", props);
 
   return (
     <Grid container direction="row">
