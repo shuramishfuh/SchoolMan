@@ -16,16 +16,16 @@ import * as yup from "yup";
 
 const initialValues = {
   name: "",
-  corporateEmail: "",
-  cityOrTown: "",
-  typeOfInstitute: "",
+  email: "",
+  city: "",
+  institute: "",
 };
 
 const validationSchema = yup.object({
   name: yup.string().required("required"),
-  corporateEmail: yup.string().email().required("required"),
-  cityOrTown: yup.string().required("required"),
-  typeOfInstitute: yup.string().required("required"),
+  email: yup.string().email().required("required"),
+  city: yup.string().required("required"),
+  institute: yup.string().required("required"),
 });
 
 const DemoForm = ({ history }) => {
@@ -68,10 +68,13 @@ const DemoForm = ({ history }) => {
 
   const onSubmit = () => {
     formik.handleSubmit();
-    history.push("/register");
+    !!formik.values.name &&
+    !!formik.values.email &&
+    !!formik.values.city &&
+    !!formik.values.institute
+      ? history.push("/")
+      : console.log("errors");
   };
-
-  console.log("errors", formik.errors);
 
   return (
     <Form onSubmit={onSubmit} className={classes.formStyles}>
@@ -92,31 +95,29 @@ const DemoForm = ({ history }) => {
       </Form.Group>
 
       <Form.Group>
-        <Form.Label htmlFor="corporateEmail">Corporate email</Form.Label>
+        <Form.Label htmlFor="email">Corporate Email</Form.Label>
         <Form.Control
           type="email"
-          id="corporateEmail"
-          name="corporateEmail"
+          id="email"
+          name="email"
           placeholder="Email"
-          {...formik.getFieldProps("corporateEmail")}
+          {...formik.getFieldProps("email")}
         />
-        {formik.touched.corporateEmail && formik.errors.corporateEmail ? (
-          <small className={classes.errorMessage}>
-            Email is a required field
-          </small>
+        {formik.touched.email && formik.errors.email ? (
+          <small className={classes.errorMessage}>Email is invalid</small>
         ) : null}
       </Form.Group>
 
       <Form.Group>
-        <Form.Label htmlFor="cityOrTown">City/Town</Form.Label>
+        <Form.Label htmlFor="city">City</Form.Label>
         <Form.Control
           type="text"
-          id="cityOrTown"
-          name="cityOrTown"
+          id="city"
+          name="city"
           placeholder="City"
-          {...formik.getFieldProps("cityOrTown")}
+          {...formik.getFieldProps("city")}
         />
-        {formik.touched.cityOrTown && formik.errors.cityOrTown ? (
+        {formik.touched.city && formik.errors.city ? (
           <small className={classes.errorMessage}>
             City is a required field
           </small>
@@ -124,24 +125,21 @@ const DemoForm = ({ history }) => {
       </Form.Group>
 
       <FormControl className={classes.formControlStyles}>
-        <InputLabel htmlFor="typeOfInstitute">
+        <InputLabel htmlFor="institute">
           <Typography color="textPrimary" style={{ fontSize: 14 }}>
             Type of Institute
           </Typography>
         </InputLabel>
         <Select
-          id="typeOfInstitute"
-          name="typeOfInstitute"
-          {...formik.getFieldProps("typeOfInstitute")}
+          id="institute"
+          name="institute"
+          {...formik.getFieldProps("institute")}
         >
           <MenuItem value="" className={classes.menuItemStyles}>
             <em>None</em>
           </MenuItem>
-          <MenuItem
-            value="Secondary/High School"
-            className={classes.menuItemStyles}
-          >
-            Secondary/High School
+          <MenuItem value="Secondary School" className={classes.menuItemStyles}>
+            Secondary School
           </MenuItem>
           <MenuItem value="University" className={classes.menuItemStyles}>
             University
@@ -150,7 +148,7 @@ const DemoForm = ({ history }) => {
             Academy
           </MenuItem>
         </Select>
-        {formik.touched.typeOfInstitute && formik.errors.typeOfInstitute ? (
+        {formik.touched.institute && formik.errors.institute ? (
           <small className={classes.errorMessage}>
             Type of Institute is a required field
           </small>

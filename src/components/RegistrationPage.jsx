@@ -5,7 +5,7 @@ const RegistrationPage = () => {
   return (
     <>
       <Typography color="textSecondary">
-        This is the registration page.
+        This is the registration page
       </Typography>
     </>
   );
