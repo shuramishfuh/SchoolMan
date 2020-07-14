@@ -52,7 +52,7 @@ const DemoForm = ({ history }) => {
     },
     menuItemStyles: {
       backgroundColor: theme.palette.secondary.main,
-      color: "black",
+      color: theme.palette.common.black,
     },
   }));
 

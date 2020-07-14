@@ -10,12 +10,18 @@ import PrivacynCookies from "./components/PrivacynCookies";
 import TermsOfUse from "./components/TermsOfUse";
 import HelpPage from "./components/HelpPage";
 import MoreInfoPage from "./components/MoreInfoPage";
+import LoginPage from "./components/LoginPage";
+import StudentDashboard from "./components/StudentViews/StudentDashboard";
+import StaffDashboard from "./components/StaffViews/StaffDashboard";
+import AdminDashboard from "./components/AdminViews/AdminDashboard";
+import RecoverLoginDetails from "./components/RecoverLoginDetails";
 
 const App = () => {
   return (
     <>
       <Switch>
         <Route exact path="/" component={HomePage}></Route>
+        <Route exact path="/login" component={LoginPage}></Route>
         <Route exact path="/about" component={AboutPage}></Route>
         <Route exact path="/privacy" component={PrivacynCookies}></Route>
         <Route exact path="/terms-of-use" component={TermsOfUse}></Route>
@@ -24,6 +30,18 @@ const App = () => {
         <Route exact path="/subscribe" component={SubscribePage}></Route>
         <Route exact path="/help" component={HelpPage}></Route>
         <Route exact path="/more-info" component={MoreInfoPage}></Route>
+        <Route
+          exact
+          path="/recover-details"
+          component={RecoverLoginDetails}
+        ></Route>
+        <Route
+          exact
+          path="/student/dashboard"
+          component={StudentDashboard}
+        ></Route>
+        <Route exact path="/staff/dashboard" component={StaffDashboard}></Route>
+        <Route exact path="/admin/dashboard" component={AdminDashboard}></Route>
       </Switch>
     </>
   );

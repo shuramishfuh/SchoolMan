@@ -4,26 +4,27 @@ import { Typography, makeStyles } from "@material-ui/core";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import FreeTrialForm from "./FreeTrialForm";
 import { Link } from "react-router-dom";
+import Footer from "../Footer";
 
 const SubscribePage = (props) => {
   const { history } = props;
 
   const isXSWidth = useMediaQuery("(max-width: 600px)");
 
-  const useStyles = makeStyles({
+  const useStyles = makeStyles((theme) => ({
     mainHeader: {
       height: isXSWidth ? 120 : 60,
-      backgroundColor: "rgb(240, 240,240)",
+      backgroundColor: theme.palette.secondary.main,
     },
     schoolPortalStyles: {
       fontSize: 24,
       fontWeight: "bold",
-      color: "black",
+      color: theme.palette.common.black,
     },
     infoItemStyles: {
       fontSize: 14,
       fontWeight: "bold",
-      color: "black",
+      color: theme.palette.common.black,
     },
     bodyStyles: {
       height: "auto",
@@ -34,15 +35,11 @@ const SubscribePage = (props) => {
       fontSize: 16,
       fontWeight: 600,
     },
-    footerStyles: {
-      backgroundColor: "rgb(192,192,192)",
-      height: isXSWidth ? 320 : 150,
+    helpStyles: {
+      backgroundColor: theme.palette.secondary.main,
+      paddingBottom: 8,
     },
-    footerTextStyles: {
-      color: "black",
-      fontSize: 12,
-    },
-  });
+  }));
 
   const classes = useStyles();
 
@@ -111,10 +108,7 @@ const SubscribePage = (props) => {
         direction="row"
         alignItems="center"
         justify="flex-start"
-        style={{
-          backgroundColor: "rgb(240,240,240)",
-          paddingBottom: 8,
-        }}
+        className={classes.helpStyles}
       >
         <Grid item xs={10} sm={11}></Grid>
         <Grid item xs={2} sm={1}>
@@ -136,7 +130,6 @@ const SubscribePage = (props) => {
           item
           container
           direction="column"
-          xs={12}
           sm={8}
           alignItems="center"
           justify="flex-start"
@@ -151,93 +144,7 @@ const SubscribePage = (props) => {
         </Grid>
         <Grid item xs={false} sm={2}></Grid>
       </Grid>
-      <Grid
-        item
-        container
-        direction={isXSWidth ? "column" : "row"}
-        alignItems="center"
-        justify="space-evenly"
-        className={classes.footerStyles}
-      >
-        <Grid
-          item
-          container
-          direction={isXSWidth ? "row" : "column"}
-          alignItems="center"
-          justify={isXSWidth ? "center" : "flex-start"}
-          sm={4}
-        >
-          <div>
-            <span style={{ fontSize: 16, color: "black" }}>MyDS</span>
-            <address className={classes.footerTextStyles}>
-              <br />
-              United Kingdom,
-              <br />
-              Edinburgh,
-              <br />
-              123 Fountain Bridge EH3 9QG
-            </address>
-          </div>
-        </Grid>
-        <Grid
-          item
-          container
-          direction={isXSWidth ? "row" : "column"}
-          alignItems="center"
-          justify={isXSWidth ? "center" : "flex-start"}
-          sm={4}
-        >
-          <div>
-            <br />
-            <Link to="/about" className={classes.footerTextStyles}>
-              About Us
-            </Link>
-            <br />
-            <Link to="/privacy" className={classes.footerTextStyles}>
-              Privacy and Cookies
-            </Link>
-            <br />
-            <Link to="/terms-of-use" className={classes.footerTextStyles}>
-              Terms of Use
-            </Link>
-          </div>
-        </Grid>
-        <Grid
-          item
-          container
-          direction="column"
-          alignItems="center"
-          justify={isXSWidth ? "center" : "flex-start"}
-          sm={4}
-        >
-          <div>
-            <br />
-            <address>
-              <span style={{ fontSize: 16, color: "black" }}>Contact Us</span>
-              <br />
-              <br />
-              <a href="tel:+447519688778" style={{ color: "black" }}>
-                +44 (0) 7519688778
-              </a>
-              <br />
-              <div>
-                <small>
-                  <b style={{ color: "black" }}>Created by</b>
-                </small>{" "}
-                <small>
-                  <b style={{ color: "purple" }}>IT Services Group</b>
-                </small>
-              </div>
-            </address>
-          </div>
-        </Grid>
-      </Grid>
-      <Grid item container direction="row" style={{ padding: 16 }}>
-        <small>
-          Unless explicitly stated otherwise, all material is &copy; IT Services
-          Group
-        </small>
-      </Grid>
+      <Footer />
     </Grid>
   );
 };
