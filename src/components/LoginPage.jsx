@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, makeStyles, Typography } from "@material-ui/core";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import LoginForm from "./LoginForm";
-import Footer from "../Footer";
+import Footer from "./Footer";
 
 const LoginPage = (props) => {
   const { history } = props;
@@ -19,7 +19,7 @@ const LoginPage = (props) => {
       fontWeight: "bold",
     },
     bodyStyles: {
-      height: 500,
+      height: 540,
       backgroundColor: "grey",
     },
     loginStyle: {
@@ -87,4 +87,5 @@ const LoginPage = (props) => {
     </Grid>
   );
 };
+
 export default LoginPage;

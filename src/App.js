@@ -15,11 +15,13 @@ import StudentDashboard from "./components/StudentViews/StudentDashboard";
 import StaffDashboard from "./components/StaffViews/StaffDashboard";
 import AdminDashboard from "./components/AdminViews/AdminDashboard";
 import RecoverLoginDetails from "./components/RecoverLoginDetails";
+import WelcomePage from "./components/WelcomePage";
 
 const App = () => {
   return (
     <>
       <Switch>
+        <Route exact path="/welcome" component={WelcomePage}></Route>
         <Route exact path="/" component={HomePage}></Route>
         <Route exact path="/login" component={LoginPage}></Route>
         <Route exact path="/about" component={AboutPage}></Route>

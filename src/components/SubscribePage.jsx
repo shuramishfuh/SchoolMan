@@ -4,7 +4,7 @@ import { Typography, makeStyles } from "@material-ui/core";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import FreeTrialForm from "./FreeTrialForm";
 import { Link } from "react-router-dom";
-import Footer from "../Footer";
+import Footer from "./Footer";
 
 const SubscribePage = (props) => {
   const { history } = props;
@@ -21,7 +21,7 @@ const SubscribePage = (props) => {
       fontWeight: "bold",
       color: theme.palette.common.black,
     },
-    infoItemStyles: {
+    linkStyles: {
       fontSize: 14,
       fontWeight: "bold",
       color: theme.palette.common.black,
@@ -73,7 +73,7 @@ const SubscribePage = (props) => {
           justify="center"
           sm={2}
         >
-          <Link to="/more-info" className={classes.infoItemStyles}>
+          <Link to="/more-info" className={classes.linkStyles}>
             School
           </Link>
         </Grid>
@@ -85,7 +85,7 @@ const SubscribePage = (props) => {
           justify="center"
           sm={2}
         >
-          <Link to="/more-info" className={classes.infoItemStyles}>
+          <Link to="/more-info" className={classes.linkStyles}>
             University
           </Link>
         </Grid>
@@ -97,7 +97,7 @@ const SubscribePage = (props) => {
           justify="center"
           sm={2}
         >
-          <Link to="/more-info" className={classes.infoItemStyles}>
+          <Link to="/more-info" className={classes.linkStyles}>
             Academy
           </Link>
         </Grid>
@@ -112,7 +112,7 @@ const SubscribePage = (props) => {
       >
         <Grid item xs={10} sm={11}></Grid>
         <Grid item xs={2} sm={1}>
-          <Link to="/help" className={classes.infoItemStyles}>
+          <Link to="/help" className={classes.linkStyles}>
             Help
           </Link>
         </Grid>
