@@ -111,8 +111,8 @@ const Footer = () => {
       </Grid>
       <Grid item style={{ padding: 8 }}>
         <small>
-          Unless explicitly stated otherwise, all material is &copy; IT Services
-          Group
+          Unless explicitly stated otherwise, all material is copyright &copy;
+          IT Services Group
         </small>
       </Grid>
     </>
