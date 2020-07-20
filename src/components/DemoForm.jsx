@@ -37,6 +37,10 @@ const DemoForm = ({ history }) => {
       "&:hover": {
         backgroundColor: "rgba(0, 0, 0, 0.75)",
       },
+      "&:focus": {
+        outline: 0,
+        boxShadow: "none!important",
+      },
     },
     buttonTextStyles: {
       fontFamily: "Arial Rounded MT Bold",

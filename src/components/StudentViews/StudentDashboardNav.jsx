@@ -7,13 +7,14 @@ import StudiesDropDown from "./DashboardNavDropDowns/StudiesDropDown";
 import ExtracurrsDropDown from "./DashboardNavDropDowns/ExtracurrsDropDown";
 import AchievementsDropDown from "./DashboardNavDropDowns/AchievementsDropDown";
 import OpportunitiesDropDown from "./DashboardNavDropDowns/OpportunitiesDropDown";
+import StudentDashboardNavMenu from "./StudentDashboardNavMenu";
 
 const StudentDashboardNav = () => {
   const isSmallWidth = useMediaQuery("(max-width: 960px)");
 
   const useStyles = makeStyles((theme) => ({
     navBarStyles: {
-      height: isSmallWidth ? 120 : 48,
+      height: 50,
     },
     navBarItemOnStyles: {
       "&:hover": {
@@ -131,6 +132,7 @@ const StudentDashboardNav = () => {
     });
   };
 
+  if (isSmallWidth) return <StudentDashboardNavMenu />;
   return (
     <Grid container direction="column" alignItems="center">
       <Grid item container alignItems="center" className={classes.navBarStyles}>

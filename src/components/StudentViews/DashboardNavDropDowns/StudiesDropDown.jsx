@@ -2,17 +2,17 @@ import React, { useEffect, useRef, useCallback } from "react";
 import { Grid, Typography, makeStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
-const StudiesDropDown = ({ toggleStudies, setToggleState, studies }) => {
-  const useStyles = makeStyles((theme) => ({
-    titleStyles: {
-      color: theme.palette.grey[600],
-      fontWeight: "bold",
-    },
-    textStyles: {
-      color: theme.palette.common.black,
-    },
-  }));
+const useStyles = makeStyles((theme) => ({
+  titleStyles: {
+    color: theme.palette.grey[600],
+    fontWeight: "bold",
+  },
+  textStyles: {
+    color: theme.palette.common.black,
+  },
+}));
 
+const StudiesDropDown = ({ toggleStudies, setToggleState, studies }) => {
   const classes = useStyles();
   const ref = useRef();
 
