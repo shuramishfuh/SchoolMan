@@ -49,10 +49,6 @@ const StudentDashboardNav = () => {
       height: isSmallWidth ? 200 : 100,
       backgroundColor: theme.palette.secondary.main,
     },
-    navDropDownOffStyles: {
-      height: isSmallWidth ? 200 : 100,
-      backgroundColor: "grey",
-    },
     mouseOverTextStyles: {
       textDecorationLine: "underline",
     },
@@ -328,45 +324,44 @@ const StudentDashboardNav = () => {
           </div>
         </Grid>
       </Grid>
-      <Grid
-        item
-        container
-        direction="row"
-        className={
-          navDropDownOn
-            ? classes.navDropDownOnStyles
-            : classes.navDropDownOffStyles
-        }
-      >
-        {navState.studies && toggleState.toggleStudies && (
-          <StudiesDropDown
-            toggleStudies={toggleState.toggleStudies}
-            setToggleState={setToggleState}
-            studies={navState.studies}
-          />
-        )}
-        {navState.extracurriculars && toggleState.toggleExtracurrs && (
-          <ExtracurrsDropDown
-            toggleExtracurrs={toggleState.toggleExtracurrs}
-            setToggleState={setToggleState}
-            extracurriculars={navState.extracurriculars}
-          />
-        )}
-        {navState.achievements && toggleState.toggleAchievements && (
-          <AchievementsDropDown
-            toggleAchievements={toggleState.toggleAchievements}
-            setToggleState={setToggleState}
-            achievements={navState.achievements}
-          />
-        )}
-        {navState.opportunities && toggleState.toggleOpportunities && (
-          <OpportunitiesDropDown
-            toggleOpportunities={toggleState.toggleOpportunities}
-            setToggleState={setToggleState}
-            opportunities={navState.opportunities}
-          />
-        )}
-      </Grid>
+
+      {navDropDownOn && (
+        <Grid
+          item
+          container
+          direction="row"
+          className={classes.navDropDownOnStyles}
+        >
+          {navState.studies && toggleState.toggleStudies && (
+            <StudiesDropDown
+              toggleStudies={toggleState.toggleStudies}
+              setToggleState={setToggleState}
+              studies={navState.studies}
+            />
+          )}
+          {navState.extracurriculars && toggleState.toggleExtracurrs && (
+            <ExtracurrsDropDown
+              toggleExtracurrs={toggleState.toggleExtracurrs}
+              setToggleState={setToggleState}
+              extracurriculars={navState.extracurriculars}
+            />
+          )}
+          {navState.achievements && toggleState.toggleAchievements && (
+            <AchievementsDropDown
+              toggleAchievements={toggleState.toggleAchievements}
+              setToggleState={setToggleState}
+              achievements={navState.achievements}
+            />
+          )}
+          {navState.opportunities && toggleState.toggleOpportunities && (
+            <OpportunitiesDropDown
+              toggleOpportunities={toggleState.toggleOpportunities}
+              setToggleState={setToggleState}
+              opportunities={navState.opportunities}
+            />
+          )}
+        </Grid>
+      )}
     </Grid>
   );
 };

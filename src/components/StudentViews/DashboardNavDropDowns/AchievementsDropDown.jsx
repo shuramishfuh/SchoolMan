@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useCallback } from "react";
 import { Grid, Typography, makeStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { Row } from "react-bootstrap";
 
 const AchievementsDropDown = ({
   toggleAchievements,
@@ -14,6 +16,10 @@ const AchievementsDropDown = ({
     },
     textStyles: {
       color: theme.palette.common.black,
+    },
+    arrowRightStyles: {
+      color: theme.palette.common.black,
+      fontSize: 24,
     },
   }));
 
@@ -51,15 +57,23 @@ const AchievementsDropDown = ({
         justify="space-evenly"
         md={6}
       >
-        <Typography className={classes.titleStyles}>
-          Academic Records
-        </Typography>
-        <Link to="/" className={classes.textStyles}>
-          Transcripts
-        </Link>
-        <Link to="/" className={classes.textStyles}>
-          Certificates
-        </Link>
+        <Row>
+          <Typography className={classes.titleStyles}>
+            Academic Records
+          </Typography>
+        </Row>
+        <Row>
+          <MdKeyboardArrowRight className={classes.arrowRightStyles} />
+          <Link to="/" className={classes.textStyles}>
+            Transcripts
+          </Link>
+        </Row>
+        <Row>
+          <MdKeyboardArrowRight className={classes.arrowRightStyles} />
+          <Link to="/" className={classes.textStyles}>
+            Certificates
+          </Link>
+        </Row>
       </Grid>
 
       <Grid
@@ -70,10 +84,15 @@ const AchievementsDropDown = ({
         justify="space-evenly"
         md={6}
       >
-        <Typography className={classes.titleStyles}>Awards</Typography>
-        <Link to="/" className={classes.textStyles}>
-          My Awards
-        </Link>
+        <Row>
+          <Typography className={classes.titleStyles}>Awards</Typography>
+        </Row>
+        <Row>
+          <MdKeyboardArrowRight className={classes.arrowRightStyles} />
+          <Link to="/" className={classes.textStyles}>
+            My Awards
+          </Link>
+        </Row>
       </Grid>
     </Grid>
   );

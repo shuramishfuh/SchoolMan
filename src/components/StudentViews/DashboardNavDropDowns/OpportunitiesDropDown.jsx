@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useCallback } from "react";
 import { Grid, Typography, makeStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { Row } from "react-bootstrap";
 
 const OpportunitiesDropDown = ({
   toggleOpportunities,
@@ -14,6 +16,10 @@ const OpportunitiesDropDown = ({
     },
     textStyles: {
       color: theme.palette.common.black,
+    },
+    arrowRightStyles: {
+      color: theme.palette.common.black,
+      fontSize: 24,
     },
   }));
 
@@ -51,13 +57,21 @@ const OpportunitiesDropDown = ({
         justify="space-evenly"
         md={6}
       >
-        <Typography className={classes.titleStyles}>Opportunities</Typography>
-        <Link to="/" className={classes.textStyles}>
-          School Competitions
-        </Link>
-        <Link to="/" className={classes.textStyles}>
-          Scholarships
-        </Link>
+        <Row>
+          <Typography className={classes.titleStyles}>Opportunities</Typography>
+        </Row>
+        <Row>
+          <MdKeyboardArrowRight className={classes.arrowRightStyles} />
+          <Link to="/" className={classes.textStyles}>
+            Scholarships
+          </Link>
+        </Row>
+        <Row>
+          <MdKeyboardArrowRight className={classes.arrowRightStyles} />
+          <Link to="/" className={classes.textStyles}>
+            School Competitions
+          </Link>
+        </Row>
       </Grid>
 
       <Grid
@@ -68,10 +82,15 @@ const OpportunitiesDropDown = ({
         justify="space-evenly"
         md={6}
       >
-        <Typography className={classes.titleStyles}>Careers</Typography>
-        <Link to="/" className={classes.textStyles}>
-          Jobs
-        </Link>
+        <Row>
+          <Typography className={classes.titleStyles}>Careers</Typography>
+        </Row>
+        <Row>
+          <MdKeyboardArrowRight className={classes.arrowRightStyles} />
+          <Link to="/" className={classes.textStyles}>
+            Jobs
+          </Link>
+        </Row>
       </Grid>
     </Grid>
   );

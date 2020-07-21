@@ -3,6 +3,7 @@ import { Grid, makeStyles, Typography } from "@material-ui/core";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import LoginForm from "./LoginForm";
 import Footer from "./Footer";
+import { teal } from "@material-ui/core/colors";
 
 const LoginPage = (props) => {
   const { history } = props;
@@ -20,7 +21,7 @@ const LoginPage = (props) => {
     },
     bodyStyles: {
       height: 540,
-      backgroundColor: "grey",
+      backgroundColor: teal[900],
     },
     loginStyle: {
       fontSize: 20,

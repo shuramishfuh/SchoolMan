@@ -3,6 +3,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { Typography, Grid, makeStyles, Avatar } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import { teal } from "@material-ui/core/colors";
 
 const WelcomePage = () => {
   const isXSWidth = useMediaQuery("(max-width: 600px)");
@@ -24,14 +25,14 @@ const WelcomePage = () => {
     },
     upperBodyStyles: {
       height: 300,
-      backgroundColor: "white",
+      backgroundColor: teal[900],
     },
     middleBodyStyles: {
       height: 40,
     },
     lowerBodyStyles: {
       height: 200,
-      backgroundColor: "grey",
+      backgroundColor: teal[900],
     },
     schoolPortalStyles: {
       fontSize: 24,
@@ -138,9 +139,7 @@ const WelcomePage = () => {
           alignItems="center"
           justify="center"
           sm={6}
-        >
-          <span style={{ color: "black" }}>Side</span>
-        </Grid>
+        ></Grid>
       </Grid>
       <Grid
         item
@@ -158,9 +157,7 @@ const WelcomePage = () => {
         className={classes.lowerBodyStyles}
         alignItems="center"
         justify="center"
-      >
-        Lower body
-      </Grid>
+      ></Grid>
       <Footer />
     </Grid>
   );

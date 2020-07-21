@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useCallback } from "react";
 import { Grid, Typography, makeStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { Row } from "react-bootstrap";
 
 const useStyles = makeStyles((theme) => ({
   titleStyles: {
@@ -9,6 +11,10 @@ const useStyles = makeStyles((theme) => ({
   },
   textStyles: {
     color: theme.palette.common.black,
+  },
+  arrowRightStyles: {
+    color: theme.palette.common.black,
+    fontSize: 24,
   },
 }));
 
@@ -47,10 +53,15 @@ const StudiesDropDown = ({ toggleStudies, setToggleState, studies }) => {
         justify="space-evenly"
         md={3}
       >
-        <Typography className={classes.titleStyles}>Courses</Typography>
-        <Link to="/" className={classes.textStyles}>
-          My Courses
-        </Link>
+        <Row>
+          <Typography className={classes.titleStyles}>Courses</Typography>
+        </Row>
+        <Row>
+          <MdKeyboardArrowRight className={classes.arrowRightStyles} />
+          <Link to="/" className={classes.textStyles}>
+            My Courses
+          </Link>
+        </Row>
       </Grid>
 
       <Grid
@@ -61,15 +72,23 @@ const StudiesDropDown = ({ toggleStudies, setToggleState, studies }) => {
         justify="space-evenly"
         md={3}
       >
-        <Typography className={classes.titleStyles}>
-          Learning Support
-        </Typography>
-        <Link to="/" className={classes.textStyles}>
-          Class Tutor
-        </Link>
-        <Link to="/" className={classes.textStyles}>
-          Additional Study Resources
-        </Link>
+        <Row>
+          <Typography className={classes.titleStyles}>
+            Learning Support
+          </Typography>
+        </Row>
+        <Row>
+          <MdKeyboardArrowRight className={classes.arrowRightStyles} />
+          <Link to="/" className={classes.textStyles}>
+            Class Tutor
+          </Link>
+        </Row>
+        <Row>
+          <MdKeyboardArrowRight className={classes.arrowRightStyles} />
+          <Link to="/" className={classes.textStyles}>
+            Additional Study Resources
+          </Link>
+        </Row>
       </Grid>
 
       <Grid
@@ -80,10 +99,15 @@ const StudiesDropDown = ({ toggleStudies, setToggleState, studies }) => {
         justify="space-evenly"
         md={3}
       >
-        <Typography className={classes.titleStyles}>Calendar</Typography>
-        <Link to="/" className={classes.textStyles}>
-          Timetables
-        </Link>
+        <Row>
+          <Typography className={classes.titleStyles}>Calendar</Typography>
+        </Row>
+        <Row>
+          <MdKeyboardArrowRight className={classes.arrowRightStyles} />
+          <Link to="/" className={classes.textStyles}>
+            Timetables
+          </Link>
+        </Row>
       </Grid>
 
       <Grid
@@ -94,10 +118,15 @@ const StudiesDropDown = ({ toggleStudies, setToggleState, studies }) => {
         justify="space-evenly"
         md={3}
       >
-        <Typography className={classes.titleStyles}>My Finance</Typography>
-        <Link to="/" className={classes.textStyles}>
-          Tuition
-        </Link>
+        <Row>
+          <Typography className={classes.titleStyles}>My Finance</Typography>
+        </Row>
+        <Row>
+          <MdKeyboardArrowRight className={classes.arrowRightStyles} />
+          <Link to="/" className={classes.textStyles}>
+            Tuition
+          </Link>
+        </Row>
       </Grid>
     </Grid>
   );

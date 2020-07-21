@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useCallback } from "react";
 import { Grid, Typography, makeStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { Row } from "react-bootstrap";
 
 const ExtracurrsDropDown = ({
   toggleExtracurrs,
@@ -14,6 +16,10 @@ const ExtracurrsDropDown = ({
     },
     textStyles: {
       color: theme.palette.common.black,
+    },
+    arrowRightStyles: {
+      color: theme.palette.common.black,
+      fontSize: 24,
     },
   }));
 
@@ -51,10 +57,15 @@ const ExtracurrsDropDown = ({
         justify="space-evenly"
         md={6}
       >
-        <Typography className={classes.titleStyles}>Socials</Typography>
-        <Link to="/" className={classes.textStyles}>
-          Clubs and Societies
-        </Link>
+        <Row>
+          <Typography className={classes.titleStyles}>Socials</Typography>
+        </Row>
+        <Row>
+          <MdKeyboardArrowRight className={classes.arrowRightStyles} />
+          <Link to="/" className={classes.textStyles}>
+            Clubs and Societies
+          </Link>
+        </Row>
       </Grid>
 
       <Grid
@@ -65,10 +76,15 @@ const ExtracurrsDropDown = ({
         justify="space-evenly"
         md={6}
       >
-        <Typography className={classes.titleStyles}>Accomodation</Typography>
-        <Link to="/" className={classes.textStyles}>
-          Accomodation Lettings
-        </Link>
+        <Row>
+          <Typography className={classes.titleStyles}>Accomodation</Typography>
+        </Row>
+        <Row>
+          <MdKeyboardArrowRight className={classes.arrowRightStyles} />
+          <Link to="/" className={classes.textStyles}>
+            Accomodation Lettings
+          </Link>
+        </Row>
       </Grid>
     </Grid>
   );

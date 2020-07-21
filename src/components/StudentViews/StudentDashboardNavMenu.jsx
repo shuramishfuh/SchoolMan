@@ -6,7 +6,9 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import { MdMenu, MdExpandMore } from "react-icons/md";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { Link } from "react-router-dom";
-import { purple } from "@material-ui/core/colors";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { Row } from "react-bootstrap";
+import { teal } from "@material-ui/core/colors";
 
 const StudentDashboardNavMenu = () => {
   const isXSWidth = useMediaQuery("(max-width: 600px)");
@@ -17,10 +19,10 @@ const StudentDashboardNavMenu = () => {
     },
     menuItemsStyles: {
       height: "auto",
-      backgroundColor: "grey",
+      backgroundColor: teal[900],
     },
     summaryStyles: {
-      backgroundColor: purple[300],
+      backgroundColor: teal[900],
     },
     summaryTextStyles: {
       color: theme.palette.common.white,
@@ -38,6 +40,10 @@ const StudentDashboardNavMenu = () => {
         outline: 0,
         boxShadow: "none!important",
       },
+    },
+    arrowRightStyles: {
+      color: theme.palette.common.black,
+      fontSize: 24,
     },
   }));
 
@@ -102,12 +108,19 @@ const StudentDashboardNavMenu = () => {
                     justify="flex-start"
                     sm={2}
                   >
-                    <Typography className={classes.titleStyles}>
-                      Courses
-                    </Typography>
-                    <Link to="/" className={classes.textStyles}>
-                      My Courses
-                    </Link>
+                    <Row>
+                      <Typography className={classes.titleStyles}>
+                        Courses
+                      </Typography>
+                    </Row>
+                    <Row>
+                      <MdKeyboardArrowRight
+                        className={classes.arrowRightStyles}
+                      />
+                      <Link to="/" className={classes.textStyles}>
+                        My Courses
+                      </Link>
+                    </Row>
                   </Grid>
 
                   <Grid
@@ -118,15 +131,27 @@ const StudentDashboardNavMenu = () => {
                     justify="flex-start"
                     sm={5}
                   >
-                    <Typography className={classes.titleStyles}>
-                      Learning Support
-                    </Typography>
-                    <Link to="/" className={classes.textStyles}>
-                      Class Tutor
-                    </Link>
-                    <Link to="/" className={classes.textStyles}>
-                      Additional Study Resources
-                    </Link>
+                    <Row>
+                      <Typography className={classes.titleStyles}>
+                        Learning Support
+                      </Typography>
+                    </Row>
+                    <Row>
+                      <MdKeyboardArrowRight
+                        className={classes.arrowRightStyles}
+                      />
+                      <Link to="/" className={classes.textStyles}>
+                        Class Tutor
+                      </Link>
+                    </Row>
+                    <Row>
+                      <MdKeyboardArrowRight
+                        className={classes.arrowRightStyles}
+                      />
+                      <Link to="/" className={classes.textStyles}>
+                        Additional Study Resources
+                      </Link>
+                    </Row>
                   </Grid>
 
                   <Grid
@@ -137,12 +162,19 @@ const StudentDashboardNavMenu = () => {
                     justify="flex-start"
                     sm={2}
                   >
-                    <Typography className={classes.titleStyles}>
-                      Calendar
-                    </Typography>
-                    <Link to="/" className={classes.textStyles}>
-                      Timetables
-                    </Link>
+                    <Row>
+                      <Typography className={classes.titleStyles}>
+                        Calendar
+                      </Typography>
+                    </Row>
+                    <Row>
+                      <MdKeyboardArrowRight
+                        className={classes.arrowRightStyles}
+                      />
+                      <Link to="/" className={classes.textStyles}>
+                        Timetables
+                      </Link>
+                    </Row>
                   </Grid>
 
                   <Grid
@@ -153,12 +185,19 @@ const StudentDashboardNavMenu = () => {
                     justify="flex-start"
                     sm={3}
                   >
-                    <Typography className={classes.titleStyles}>
-                      My Finance
-                    </Typography>
-                    <Link to="/" className={classes.textStyles}>
-                      Tuition
-                    </Link>
+                    <Row>
+                      <Typography className={classes.titleStyles}>
+                        My Finance
+                      </Typography>
+                    </Row>
+                    <Row>
+                      <MdKeyboardArrowRight
+                        className={classes.arrowRightStyles}
+                      />
+                      <Link to="/" className={classes.textStyles}>
+                        Tuition
+                      </Link>
+                    </Row>
                   </Grid>
                 </Grid>
               </AccordionDetails>
@@ -186,12 +225,19 @@ const StudentDashboardNavMenu = () => {
                     justify="flex-start"
                     sm={6}
                   >
-                    <Typography className={classes.titleStyles}>
-                      Socials
-                    </Typography>
-                    <Link to="/" className={classes.textStyles}>
-                      Clubs and Societies
-                    </Link>
+                    <Row>
+                      <Typography className={classes.titleStyles}>
+                        Socials
+                      </Typography>
+                    </Row>
+                    <Row>
+                      <MdKeyboardArrowRight
+                        className={classes.arrowRightStyles}
+                      />
+                      <Link to="/" className={classes.textStyles}>
+                        Clubs and Societies
+                      </Link>
+                    </Row>
                   </Grid>
 
                   <Grid
@@ -202,12 +248,19 @@ const StudentDashboardNavMenu = () => {
                     justify="flex-start"
                     sm={6}
                   >
-                    <Typography className={classes.titleStyles}>
-                      Accomodation
-                    </Typography>
-                    <Link to="/" className={classes.textStyles}>
-                      Accomodation Lettings
-                    </Link>
+                    <Row>
+                      <Typography className={classes.titleStyles}>
+                        Accomodation
+                      </Typography>
+                    </Row>
+                    <Row>
+                      <MdKeyboardArrowRight
+                        className={classes.arrowRightStyles}
+                      />
+                      <Link to="/" className={classes.textStyles}>
+                        Accomodation Lettings
+                      </Link>
+                    </Row>
                   </Grid>
                 </Grid>
               </AccordionDetails>
@@ -235,15 +288,27 @@ const StudentDashboardNavMenu = () => {
                     justify="flex-start"
                     sm={6}
                   >
-                    <Typography className={classes.titleStyles}>
-                      Academic Records
-                    </Typography>
-                    <Link to="/" className={classes.textStyles}>
-                      Transcripts
-                    </Link>
-                    <Link to="/" className={classes.textStyles}>
-                      Certificates
-                    </Link>
+                    <Row>
+                      <Typography className={classes.titleStyles}>
+                        Academic Records
+                      </Typography>
+                    </Row>
+                    <Row>
+                      <MdKeyboardArrowRight
+                        className={classes.arrowRightStyles}
+                      />
+                      <Link to="/" className={classes.textStyles}>
+                        Transcripts
+                      </Link>
+                    </Row>
+                    <Row>
+                      <MdKeyboardArrowRight
+                        className={classes.arrowRightStyles}
+                      />
+                      <Link to="/" className={classes.textStyles}>
+                        Certificates
+                      </Link>
+                    </Row>
                   </Grid>
                   <Grid
                     item
@@ -253,12 +318,19 @@ const StudentDashboardNavMenu = () => {
                     justify="flex-start"
                     sm={6}
                   >
-                    <Typography className={classes.titleStyles}>
-                      Awards
-                    </Typography>
-                    <Link to="/" className={classes.textStyles}>
-                      My Awards
-                    </Link>
+                    <Row>
+                      <Typography className={classes.titleStyles}>
+                        Awards
+                      </Typography>
+                    </Row>
+                    <Row>
+                      <MdKeyboardArrowRight
+                        className={classes.arrowRightStyles}
+                      />
+                      <Link to="/" className={classes.textStyles}>
+                        My Awards
+                      </Link>
+                    </Row>
                   </Grid>
                 </Grid>
               </AccordionDetails>
@@ -286,15 +358,27 @@ const StudentDashboardNavMenu = () => {
                     justify="flex-start"
                     sm={6}
                   >
-                    <Typography className={classes.titleStyles}>
-                      Opportunities
-                    </Typography>
-                    <Link to="/" className={classes.textStyles}>
-                      School Competitions
-                    </Link>
-                    <Link to="/" className={classes.textStyles}>
-                      Scholarships
-                    </Link>
+                    <Row>
+                      <Typography className={classes.titleStyles}>
+                        Opportunities
+                      </Typography>
+                    </Row>
+                    <Row>
+                      <MdKeyboardArrowRight
+                        className={classes.arrowRightStyles}
+                      />
+                      <Link to="/" className={classes.textStyles}>
+                        Scholarships
+                      </Link>
+                    </Row>
+                    <Row>
+                      <MdKeyboardArrowRight
+                        className={classes.arrowRightStyles}
+                      />
+                      <Link to="/" className={classes.textStyles}>
+                        School Competitions
+                      </Link>
+                    </Row>
                   </Grid>
                   <Grid
                     item
@@ -304,12 +388,19 @@ const StudentDashboardNavMenu = () => {
                     justify="flex-start"
                     sm={6}
                   >
-                    <Typography className={classes.titleStyles}>
-                      Careers
-                    </Typography>
-                    <Link to="/" className={classes.textStyles}>
-                      Jobs
-                    </Link>
+                    <Row>
+                      <Typography className={classes.titleStyles}>
+                        Careers
+                      </Typography>
+                    </Row>
+                    <Row>
+                      <MdKeyboardArrowRight
+                        className={classes.arrowRightStyles}
+                      />
+                      <Link to="/" className={classes.textStyles}>
+                        Jobs
+                      </Link>
+                    </Row>
                   </Grid>
                 </Grid>
               </AccordionDetails>

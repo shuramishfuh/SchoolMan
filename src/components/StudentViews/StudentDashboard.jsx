@@ -6,13 +6,16 @@ import { MdPerson } from "react-icons/md";
 import { FaSchool } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import StudentDashboardNav from "./StudentDashboardNav";
+import StudentDashboardCards from "./StudentDashboardCards";
+import Background from "../../images/StudentDashboardbgImage.jpg";
+import { teal } from "@material-ui/core/colors";
 
 const StudentDashboard = () => {
   const isSmallWidth = useMediaQuery("(max-width: 960px)");
 
   const useStyles = makeStyles((theme) => ({
     headerStyles: {
-      height: isSmallWidth ? 96 : 80,
+      height: isSmallWidth ? 96 : 64,
       paddingLeft: 16,
     },
     schoolPortalStyles: {
@@ -28,19 +31,29 @@ const StudentDashboard = () => {
       },
       paddingTop: isSmallWidth ? 8 : 0,
     },
-    instName: {
-      height: 40,
-      paddingLeft: 8,
-      backgroundColor: "grey",
+    schoolIconStyles: {
+      fontSize: 28,
     },
-    navBar: {},
-    belowNavBar: {
+    instStyles: {
+      height: 80,
+      paddingLeft: 8,
+      backgroundColor: teal[900],
+    },
+    instTextStyles: {
+      fontWeight: "bold",
+      paddingLeft: 8,
+      paddingTop: 4,
+      textTransform: "uppercase",
+    },
+    belowNavBarStyles: {
       height: 300,
-      backgroundColor: "grey",
+      backgroundImage: `url(${Background})`,
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
     },
     lowerBodyStyles: {
-      backgroundColor: "brown",
-      height: 250,
+      backgroundColor: theme.palette.secondary.main,
+      height: isSmallWidth ? "auto" : 250,
     },
   }));
 
@@ -85,7 +98,7 @@ const StudentDashboard = () => {
               paddingTop: 4,
             }}
           >
-            Username
+            Hoffmann Muki
           </span>
           {isSmallWidth ? null : <span>&#124;</span>}
         </Grid>
@@ -109,27 +122,19 @@ const StudentDashboard = () => {
         alignItems="center"
         justify="center"
       >
-        <Grid item container alignItems="center" className={classes.instName}>
-          <FaSchool style={{ fontSize: 28 }} />
-          <span style={{ fontWeight: "bold", paddingLeft: 8, paddingTop: 4 }}>
-            Institution High School
+        <Grid item container alignItems="center" className={classes.instStyles}>
+          <FaSchool className={classes.schoolIconStyles} />
+          <span className={classes.instTextStyles}>
+            Government Bilingual High School Bamenda
           </span>
         </Grid>
-        <Grid item container className={classes.navBar}>
+        <Grid item container>
           <StudentDashboardNav />
         </Grid>
-        <Grid item container className={classes.belowNavBar}></Grid>
+        <Grid item container className={classes.belowNavBarStyles}></Grid>
       </Grid>
-      <Grid
-        item
-        container
-        direction="column"
-        alignItems="center"
-        justify="center"
-        className={classes.lowerBodyStyles}
-      >
-        Lower Body
-      </Grid>
+
+      <StudentDashboardCards />
       <Footer />
     </Grid>
   );
