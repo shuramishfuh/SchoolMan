@@ -3,12 +3,11 @@ import { Grid, makeStyles, Typography } from "@material-ui/core";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Footer from "../Footer";
 import { MdPerson } from "react-icons/md";
-import { FaSchool } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import StudentDashboardNav from "./StudentDashboardNav";
 import StudentDashboardCards from "./StudentDashboardCards";
 import Background from "../../images/StudentDashboardbgImage.jpg";
-import { teal } from "@material-ui/core/colors";
+import WoodenTable from "../../images/WoodenTable.jpg";
 
 const StudentDashboard = () => {
   const isSmallWidth = useMediaQuery("(max-width: 960px)");
@@ -31,15 +30,15 @@ const StudentDashboard = () => {
       },
       paddingTop: isSmallWidth ? 8 : 0,
     },
-    schoolIconStyles: {
-      fontSize: 28,
-    },
     instStyles: {
       height: 80,
       paddingLeft: 8,
-      backgroundColor: teal[900],
+      backgroundImage: `url(${WoodenTable})`,
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
     },
     instTextStyles: {
+      fontSize: isSmallWidth ? 14 : 20,
       fontWeight: "bold",
       paddingLeft: 8,
       paddingTop: 4,
@@ -98,7 +97,7 @@ const StudentDashboard = () => {
               paddingTop: 4,
             }}
           >
-            Hoffmann Muki
+            Username
           </span>
           {isSmallWidth ? null : <span>&#124;</span>}
         </Grid>
@@ -123,10 +122,7 @@ const StudentDashboard = () => {
         justify="center"
       >
         <Grid item container alignItems="center" className={classes.instStyles}>
-          <FaSchool className={classes.schoolIconStyles} />
-          <span className={classes.instTextStyles}>
-            Government Bilingual High School Bamenda
-          </span>
+          <span className={classes.instTextStyles}>XYZ High School</span>
         </Grid>
         <Grid item container>
           <StudentDashboardNav />

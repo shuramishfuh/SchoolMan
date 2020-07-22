@@ -3,7 +3,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { Typography, Grid, makeStyles, Avatar } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
-import { teal } from "@material-ui/core/colors";
+import LibraryImage from "../images/LibraryImage.jpg";
 
 const WelcomePage = () => {
   const isXSWidth = useMediaQuery("(max-width: 600px)");
@@ -25,14 +25,18 @@ const WelcomePage = () => {
     },
     upperBodyStyles: {
       height: 300,
-      backgroundColor: teal[900],
+      backgroundImage: `url(${LibraryImage})`,
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
     },
     middleBodyStyles: {
       height: 40,
     },
     lowerBodyStyles: {
       height: 200,
-      backgroundColor: teal[900],
+      backgroundImage: `url(${LibraryImage})`,
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
     },
     schoolPortalStyles: {
       fontSize: 24,

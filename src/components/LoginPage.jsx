@@ -3,7 +3,7 @@ import { Grid, makeStyles, Typography } from "@material-ui/core";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import LoginForm from "./LoginForm";
 import Footer from "./Footer";
-import { teal } from "@material-ui/core/colors";
+import KidAtSundown from "../images/KidAtSundown.jpg";
 
 const LoginPage = (props) => {
   const { history } = props;
@@ -21,7 +21,9 @@ const LoginPage = (props) => {
     },
     bodyStyles: {
       height: 540,
-      backgroundColor: teal[900],
+      backgroundImage: `url(${KidAtSundown})`,
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
     },
     loginStyle: {
       fontSize: 20,

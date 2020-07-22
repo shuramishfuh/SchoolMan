@@ -13,7 +13,7 @@ import Contact from "../../images/Contact.jpg";
 import Today from "../../images/Today.jpg";
 import Announcements from "../../images/Announcements.jpg";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import { teal } from "@material-ui/core/colors";
+import { brown } from "@material-ui/core/colors";
 
 const StudentDashboardCards = () => {
   const isXSWidth = useMediaQuery("(max-width: 600px)");
@@ -25,7 +25,7 @@ const StudentDashboardCards = () => {
   const useStyles = makeStyles((theme) => ({
     lowerBodyStyles: {
       height: isSmallWidth ? "auto" : 250,
-      backgroundColor: teal[900],
+      backgroundColor: brown[900],
     },
     cardStyles: {
       backgroundColor: theme.palette.grey[500],
@@ -40,6 +40,11 @@ const StudentDashboardCards = () => {
       height: 32,
       paddingTop: 4,
       paddingBottom: 4,
+    },
+    cardImageStyles: {
+      "&:hover": {
+        cursor: "default",
+      },
     },
   }));
 
@@ -62,7 +67,7 @@ const StudentDashboardCards = () => {
           style={{ padding: 8 }}
         >
           <Card className={classes.cardStyles}>
-            <CardActionArea className={classes.cardTextStyles}>
+            <CardActionArea className={classes.cardImageStyles}>
               <CardMedia
                 component="img"
                 alt="Academic Summary"
@@ -89,7 +94,7 @@ const StudentDashboardCards = () => {
           style={{ padding: 8 }}
         >
           <Card className={classes.cardStyles}>
-            <CardActionArea>
+            <CardActionArea className={classes.cardImageStyles}>
               <CardMedia
                 component="img"
                 alt="Today"
@@ -116,7 +121,7 @@ const StudentDashboardCards = () => {
           style={{ padding: 8 }}
         >
           <Card className={classes.cardStyles}>
-            <CardActionArea>
+            <CardActionArea className={classes.cardImageStyles}>
               <CardMedia
                 component="img"
                 alt="Contact"
@@ -143,7 +148,7 @@ const StudentDashboardCards = () => {
           style={{ padding: 8 }}
         >
           <Card className={classes.cardStyles}>
-            <CardActionArea>
+            <CardActionArea className={classes.cardImageStyles}>
               <CardMedia
                 component="img"
                 alt="Announcements"
@@ -181,7 +186,7 @@ const StudentDashboardCards = () => {
             style={{ padding: 8 }}
           >
             <Card className={classes.cardStyles}>
-              <CardActionArea className={classes.cardTextStyles}>
+              <CardActionArea className={classes.cardImageStyles}>
                 <CardMedia
                   component="img"
                   alt="Academic Summary"
@@ -209,7 +214,7 @@ const StudentDashboardCards = () => {
             style={{ padding: 8 }}
           >
             <Card className={classes.cardStyles}>
-              <CardActionArea>
+              <CardActionArea className={classes.cardImageStyles}>
                 <CardMedia
                   component="img"
                   alt="Today"
@@ -239,7 +244,7 @@ const StudentDashboardCards = () => {
             style={{ padding: 8 }}
           >
             <Card className={classes.cardStyles}>
-              <CardActionArea>
+              <CardActionArea className={classes.cardImageStyles}>
                 <CardMedia
                   component="img"
                   alt="Contact"
@@ -266,7 +271,7 @@ const StudentDashboardCards = () => {
             style={{ padding: 8 }}
           >
             <Card className={classes.cardStyles}>
-              <CardActionArea>
+              <CardActionArea className={classes.cardImageStyles}>
                 <CardMedia
                   component="img"
                   alt="Announcements"
@@ -304,14 +309,13 @@ const StudentDashboardCards = () => {
           style={{ padding: 8 }}
         >
           <Card className={classes.cardStyles}>
-            <CardActionArea className={classes.cardTextStyles}>
+            <CardActionArea className={classes.cardImageStyles}>
               <CardMedia
                 component="img"
                 alt="Academic Summary"
                 height="192"
                 image={AcademicSummary}
                 title="Academic Summary"
-                className={classes.cardImageStyles}
               />
             </CardActionArea>
             <div className={classes.cardContentStyles}>
@@ -332,7 +336,7 @@ const StudentDashboardCards = () => {
           style={{ padding: 8 }}
         >
           <Card className={classes.cardStyles}>
-            <CardActionArea>
+            <CardActionArea className={classes.cardImageStyles}>
               <CardMedia
                 component="img"
                 alt="Today"
@@ -359,7 +363,7 @@ const StudentDashboardCards = () => {
           style={{ padding: 8 }}
         >
           <Card className={classes.cardStyles}>
-            <CardActionArea>
+            <CardActionArea className={classes.cardImageStyles}>
               <CardMedia
                 component="img"
                 alt="Contact"
@@ -386,7 +390,7 @@ const StudentDashboardCards = () => {
           style={{ padding: 8 }}
         >
           <Card className={classes.cardStyles}>
-            <CardActionArea>
+            <CardActionArea className={classes.cardImageStyles}>
               <CardMedia
                 component="img"
                 alt="Announcements"
