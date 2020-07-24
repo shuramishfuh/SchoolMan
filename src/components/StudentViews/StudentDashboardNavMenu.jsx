@@ -8,7 +8,6 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { Link } from "react-router-dom";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Row } from "react-bootstrap";
-import { brown } from "@material-ui/core/colors";
 
 const StudentDashboardNavMenu = () => {
   const isXSWidth = useMediaQuery("(max-width: 600px)");
@@ -19,10 +18,10 @@ const StudentDashboardNavMenu = () => {
     },
     menuItemsStyles: {
       height: "auto",
-      backgroundColor: brown[900],
+      backgroundColor: theme.palette.brown.main[900],
     },
     summaryStyles: {
-      backgroundColor: brown[900],
+      backgroundColor: theme.palette.brown.main[900],
     },
     summaryTextStyles: {
       color: theme.palette.common.white,

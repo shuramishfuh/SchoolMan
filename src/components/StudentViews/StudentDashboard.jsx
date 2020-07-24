@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, makeStyles, Typography } from "@material-ui/core";
+import { Grid, makeStyles, Typography, Avatar } from "@material-ui/core";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Footer from "../Footer";
 import { MdPerson } from "react-icons/md";
@@ -86,9 +86,10 @@ const StudentDashboard = () => {
           alignItems="center"
           justify={isSmallWidth ? "center" : "space-evenly"}
           md={2}
-          style={{ paddingBottom: 0 }}
         >
-          <MdPerson style={{ fontSize: 24 }} />
+          <Avatar>
+            <MdPerson style={{ fontSize: 24 }} />
+          </Avatar>
           <span
             style={{
               fontWeight: "bold",

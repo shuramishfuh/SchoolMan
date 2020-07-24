@@ -13,7 +13,6 @@ import Contact from "../../images/Contact.jpg";
 import Today from "../../images/Today.jpg";
 import Announcements from "../../images/Announcements.jpg";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import { brown } from "@material-ui/core/colors";
 
 const StudentDashboardCards = () => {
   const isXSWidth = useMediaQuery("(max-width: 600px)");
@@ -25,7 +24,7 @@ const StudentDashboardCards = () => {
   const useStyles = makeStyles((theme) => ({
     lowerBodyStyles: {
       height: isSmallWidth ? "auto" : 250,
-      backgroundColor: brown[900],
+      backgroundColor: theme.palette.brown.main[900],
     },
     cardStyles: {
       backgroundColor: theme.palette.grey[500],
