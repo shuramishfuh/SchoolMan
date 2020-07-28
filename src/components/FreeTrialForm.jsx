@@ -82,7 +82,8 @@ const FreeTrialForm = ({ history }) => {
     console.log("formik ", formik);
   };
 
-  const onSubmit = () => {
+  const onSubmit = (event) => {
+    event.preventDefault();
     formik.handleSubmit();
     !!formik.values.name &&
     !!formik.values.cardNumber &&

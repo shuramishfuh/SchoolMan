@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Grid, makeStyles, IconButton } from "@material-ui/core";
 import AdminSidePanel from "./AdminSidePanel";
-import { MdMenu } from "react-icons/md";
+import { MdMenu, MdClose } from "react-icons/md";
 
 const AdminDashboardMenu = () => {
   const useStyles = makeStyles((theme) => ({
@@ -34,7 +34,11 @@ const AdminDashboardMenu = () => {
         className={classes.menuStyles}
       >
         <IconButton onClick={handleMenuToggle} className={classes.buttonStyles}>
-          <MdMenu style={{ color: "black" }} />
+          {open ? (
+            <MdClose style={{ color: "black" }} />
+          ) : (
+            <MdMenu style={{ color: "black" }} />
+          )}
         </IconButton>
       </Grid>
       {open && <AdminSidePanel />}

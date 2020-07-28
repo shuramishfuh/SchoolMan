@@ -3,7 +3,7 @@ import { makeStyles, Grid, IconButton, Typography } from "@material-ui/core";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
-import { MdMenu, MdExpandMore } from "react-icons/md";
+import { MdMenu, MdExpandMore, MdClose } from "react-icons/md";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { Link } from "react-router-dom";
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -73,7 +73,7 @@ const StudentDashboardNavMenu = () => {
           onClick={handleMenuToggle}
           className={classes.buttonStyles}
         >
-          <MdMenu />
+          {open ? <MdClose /> : <MdMenu />}
         </IconButton>
       </Grid>
       {open && (

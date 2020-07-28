@@ -16,6 +16,7 @@ import StaffDashboard from "./components/StaffViews/StaffDashboard";
 import AdminDashboard from "./components/AdminViews/AdminDashboard";
 import RecoverLoginDetails from "./components/RecoverLoginDetails";
 import WelcomePage from "./components/WelcomePage";
+import ErrorPage from "./components/ErrorPage";
 
 const App = () => {
   return (
@@ -44,6 +45,7 @@ const App = () => {
         ></Route>
         <Route exact path="/staff/dashboard" component={StaffDashboard}></Route>
         <Route exact path="/admin/dashboard" component={AdminDashboard}></Route>
+        <Route path="*" component={ErrorPage}></Route>
       </Switch>
     </>
   );

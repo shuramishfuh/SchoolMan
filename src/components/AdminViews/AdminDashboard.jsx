@@ -6,6 +6,8 @@ import { FaCaretDown } from "react-icons/fa";
 import AdminSidePanel from "./AdminSidePanel";
 import AdminDashboardMenu from "./AdminDashboardMenu";
 import { Link } from "react-router-dom";
+import { grey } from "@material-ui/core/colors";
+import AdminDashboardCardsnActions from "./AdminDashboardCardsnActions";
 
 const AdminDashboard = () => {
   const isSmallWidth = useMediaQuery("(max-width: 960px)");
@@ -16,6 +18,7 @@ const AdminDashboard = () => {
       height: 100,
     },
     instStyles: {
+      fontFamily: "-apple-system, system-ui",
       fontWeight: "bold",
       fontSize: 20,
       textTransform: "uppercase",
@@ -31,7 +34,7 @@ const AdminDashboard = () => {
     },
     bodyStyles: {
       backgroundColor: theme.palette.brown.main[500],
-      height: 1000,
+      height: "auto",
     },
     schoolPortalStyles: {
       height: 100,
@@ -48,14 +51,26 @@ const AdminDashboard = () => {
     adminbgStyles: {
       backgroundColor: theme.palette.darkViolet.main,
     },
+    profileTextStyles: {
+      fontSize: 14,
+      color: theme.palette.text.primary,
+      fontFamily: "Arial, Helvetica, sans-serif",
+      "&:hover": {
+        color: theme.palette.common.white,
+      },
+    },
   }));
 
   const classes = useStyles();
-  const [toggleProfile, setToggleProfile] = useState(true);
+  const [toggleProfile, setToggleProfile] = useState(false);
 
   const handleToggleProfile = () => {
     setToggleProfile(!toggleProfile);
   };
+
+  // useEffect(() => {
+  //   return () => (document.body.backgroundColor = "white");
+  // }, []);
 
   return (
     <Grid container className={classes.adminbgStyles}>
@@ -142,61 +157,68 @@ const AdminDashboard = () => {
         {toggleProfile && isSmallWidth && (
           <div
             style={{
-              backgroundColor: "white",
-              color: "black",
+              backgroundColor: grey[900],
               position: "absolute",
               textAlign: "center",
-              height: 60,
+              height: "auto",
               width: isXSWidth ? 120 : 160,
+              padding: 5,
               right: 0,
               top: 96,
+              zIndex: 1,
             }}
           >
-            <b>First name</b>
+            <p>
+              <span className={classes.profileTextStyles}>Username</span>
+            </p>
+            <div style={{ height: 1, backgroundColor: "white" }}></div>
             <br />
-            <Link to="/">
-              <b>My Profile</b>
-            </Link>
-            <br />
-            <Link to="/login">
-              <b>Sign out</b>
-            </Link>
+            <p>
+              <Link to="/" className={classes.profileTextStyles}>
+                <span>My Profile</span>
+              </Link>
+            </p>
+            <p>
+              <Link to="/login" className={classes.profileTextStyles}>
+                <span>Sign out</span>
+              </Link>
+            </p>
           </div>
         )}
         {toggleProfile && !isSmallWidth && (
           <div
             style={{
-              backgroundColor: "white",
-              color: "black",
+              backgroundColor: grey[900],
               position: "absolute",
               textAlign: "center",
-              height: 60,
+              height: "auto",
               width: 120,
+              padding: 5,
               right: 0,
               top: 88,
+              zIndex: 1,
             }}
           >
-            <b>First name</b>
+            <p>
+              <span className={classes.profileTextStyles}>Username</span>
+            </p>
+            <div style={{ height: 1, backgroundColor: "white" }}></div>
             <br />
-            <Link to="/">
-              <b>My Profile</b>
-            </Link>
-            <br />
-            <Link to="/login">
-              <b>Sign out</b>
-            </Link>
+            <p>
+              <Link to="/" className={classes.profileTextStyles}>
+                <span>My Profile</span>
+              </Link>
+            </p>
+            <p>
+              <Link to="/login" className={classes.profileTextStyles}>
+                <span>Sign out</span>
+              </Link>
+            </p>
           </div>
         )}
         {isSmallWidth && <AdminDashboardMenu />}
-        <Grid
-          item
-          container
-          direction="column"
-          alignItems="center"
-          justify="center"
-          className={classes.bodyStyles}
-        >
-          This is the grid body
+        <Grid item container direction="column" className={classes.bodyStyles}>
+          <AdminDashboardCardsnActions />
         </Grid>
       </Grid>
     </Grid>

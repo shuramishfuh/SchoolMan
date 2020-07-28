@@ -14,7 +14,7 @@ const StudentDashboard = () => {
 
   const useStyles = makeStyles((theme) => ({
     headerStyles: {
-      height: isSmallWidth ? 96 : 64,
+      height: isSmallWidth ? 128 : 64,
       paddingLeft: 16,
     },
     schoolPortalStyles: {
@@ -38,8 +38,9 @@ const StudentDashboard = () => {
       backgroundRepeat: "no-repeat",
     },
     instTextStyles: {
-      fontSize: isSmallWidth ? 14 : 20,
+      fontSize: isSmallWidth ? 18 : 20,
       fontWeight: "bold",
+      fontFamily: "-apple-system, system-ui",
       paddingLeft: 8,
       paddingTop: 4,
       textTransform: "uppercase",
@@ -95,7 +96,6 @@ const StudentDashboard = () => {
               fontWeight: "bold",
               paddingLeft: 8,
               paddingRight: 8,
-              paddingTop: 4,
             }}
           >
             Username

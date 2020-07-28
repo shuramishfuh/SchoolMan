@@ -70,7 +70,8 @@ const DemoForm = ({ history }) => {
     validationSchema,
   });
 
-  const onSubmit = () => {
+  const onSubmit = (event) => {
+    event.preventDefault();
     formik.handleSubmit();
     !!formik.values.name &&
     !!formik.values.email &&

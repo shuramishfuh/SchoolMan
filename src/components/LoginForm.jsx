@@ -72,7 +72,8 @@ const LoginForm = ({ history }) => {
     validationSchema,
   });
 
-  const onSubmit = () => {
+  const onSubmit = (event) => {
+    event.preventDefault();
     formik.handleSubmit();
     !!formik.values.username && !!formik.values.password
       ? history.push("/student/dashboard")

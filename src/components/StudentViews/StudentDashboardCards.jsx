@@ -16,8 +16,8 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const StudentDashboardCards = () => {
   const isXSWidth = useMediaQuery("(max-width: 600px)");
-  const isMediumWidth = useMediaQuery("(min-width: 961px)");
-  let a = useMediaQuery("(min-width: 601px)");
+  const isMediumWidth = useMediaQuery("(min-width: 960px)");
+  let a = useMediaQuery("(min-width: 600px)");
   let b = useMediaQuery("(max-width: 960px)");
   const isSmallWidth = a && b;
 
@@ -192,7 +192,6 @@ const StudentDashboardCards = () => {
                   height="192"
                   image={AcademicSummary}
                   title="Academic Summary"
-                  className={classes.cardImageStyles}
                 />
               </CardActionArea>
               <div className={classes.cardContentStyles}>
